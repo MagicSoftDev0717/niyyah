@@ -1,13 +1,13 @@
 "use client"
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Icon } from "@iconify/react/dist/iconify.js";
+
 const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     //////////////
     const [imageSrc, setImageSrc] = useState("/assets/Header/Property_Default.svg");
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    // const [isModalOpen, setIsModalOpen] = useState(false);
 
 
     useEffect(() => {
