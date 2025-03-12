@@ -41,7 +41,7 @@ const Header = () => {
                                     height={45}
                                     onMouseEnter={() => setImageSrc("/assets/Header/Property_Variant2.svg")}
                                     onMouseLeave={() => setImageSrc("/assets/Header/Property_Default.svg")}
-                                    onClick={() => setIsModalOpen(true)} // Open modal on click
+                                // onClick={() => setIsModalOpen(true)} // Open modal on click
                                 />
                             </div>
 
@@ -51,24 +51,24 @@ const Header = () => {
 
                         {/* Row 2: Date, Other Elements */}
                         <div className="flex justify-between w-full md:w-auto gap-6">
-                        <div className="flex items-center space-x-4">
-                            <div className="flex flex-row md:flex-wrap justify-end w-full md:w-auto items-center gap-2 text-center md:text-right">
-                                <p className="text-sm w-1/2 md:w-full">Ramadan 1, 1446 AH</p>
-                                <p className="text-sm w-1/2 md:w-full">March 12, 2025</p>
-                            </div>
-                        </div>
-                        <div className="flex justify-between w-full md:w-auto gap-6">
                             <div className="flex items-center space-x-4">
-                                <Image
-                                    src="/assets/Header/Default_Lang.svg"
-                                    alt="Language"
-                                    width={24}
-                                    height={24}
-                                />
-                                <span className="text-white hover:text-yellow-500">EN</span>
-                                <button className="border border-white px-4 py-1">Join Free</button>
+                                <div className="flex flex-row md:flex-wrap justify-end w-full md:w-auto items-center gap-2 text-center md:text-right">
+                                    <p className="text-sm w-1/2 md:w-full">Ramadan 1, 1446 AH</p>
+                                    <p className="text-sm w-1/2 md:w-full">March 12, 2025</p>
+                                </div>
                             </div>
-                        </div>
+                            <div className="flex justify-between w-full md:w-auto gap-6">
+                                <div className="flex items-center space-x-4">
+                                    <Image
+                                        src="/assets/Header/Default_Lang.svg"
+                                        alt="Language"
+                                        width={24}
+                                        height={24}
+                                    />
+                                    <span className="text-white hover:text-yellow-500">EN</span>
+                                    <button className="border border-white px-4 py-1">Join Free</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     :
@@ -102,7 +102,7 @@ const Header = () => {
                                 height={45}
                                 onMouseEnter={() => setImageSrc("/assets/Header/Property_Variant2.svg")}
                                 onMouseLeave={() => setImageSrc("/assets/Header/Property_Default.svg")}
-                                onClick={() => setIsModalOpen(true)} // Open modal on click
+                                // onClick={() => setIsModalOpen(true)} // Open modal on click
                             />
 
                             <div className="flex flex-row md:flex-wrap i-center justify-end w-full md:w-auto items-center gap-2 text-center md:text-right">
