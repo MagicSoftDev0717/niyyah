@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-      <footer className="bg-gray-900 text-white py-6 mt-10">
+      <footer className="bg-black text-white py-6 mt-10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
             {/* Column 1: Logo */}
@@ -9,11 +9,11 @@ const Footer = () => {
             </div>
   
             {/* Column 2: Links */}
-            <div className="flex flex-col space-y-2">
+            {/* <div className="flex flex-col space-y-2">
               <a href="#" className="hover:text-yellow-400">Privacy Policy</a>
               <a href="#" className="hover:text-yellow-400">Terms of Service</a>
               <a href="#" className="hover:text-yellow-400">Contact Us</a>
-            </div>
+            </div> */}
   
             {/* Column 3: Social Icons */}
             <div className="flex justify-center md:justify-end space-x-4">
