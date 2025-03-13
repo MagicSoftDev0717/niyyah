@@ -19,8 +19,8 @@ const Sights = () => {
 
 
     return (
-        <section className="relative w-full">
-            <div className="relative grid grid-rows-2 mx-auto lg:max-w-full bg-[#000000]">
+        <section className="relative w-full bg-[#000000]">
+            <div className="relative grid grid-rows-2 mx-auto lg:max-w-full ">
                 <div className={`relative row-span-1 ${isMobile ? "w-full px-6" : "grid grid-cols-12"} flex flex-col`}>
 
                     {/* Left Spacing for Desktop */}
@@ -52,7 +52,7 @@ const Sights = () => {
                         <input
                             type="text"
                             placeholder="Your name*"
-                            className="p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-md"
+                            className="p-2 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-md"
                         />
                     </div>
 
@@ -60,7 +60,7 @@ const Sights = () => {
                         <input
                             type="email"
                             placeholder="Your email*"
-                            className="p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-md"
+                            className="p-2 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-md"
                         />
                     </div>
 
@@ -68,7 +68,7 @@ const Sights = () => {
                         <input
                             type="text"
                             placeholder="Your phone number*"
-                            className="p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-md"
+                            className="p-2 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-md"
                         />
                     </div>
 
