@@ -52,7 +52,7 @@ const Services = () => {
 
     return (
         <section
-            className={`relative  w-full h-screen flex items-center justify-center overflow-hidden ${isMobile ? 'bg-[#2D0048]' : ''}`}
+            className={`relative  w-full h-full flex items-center justify-center overflow-hidden ${isMobile ? 'bg-[#2D0048]' : ''}`}
         >
             {/* Full-Screen Image Wrapper */}
             <div className="relative grid grid-rows-12 w-full h-full">
@@ -121,7 +121,7 @@ const Services = () => {
                                 <span
                                     className="text-2xl md:text-3xl text-center md:text-left leading-tight flex flex-col justify-center w-full md:w-auto max-w-xs mx-auto"
                                 >
-                                    Niyyah for Success. <br className="block md:hidden" /> Achieve Business Excellence
+                                    Niyyah for Success.  Achieve <br className="block md:hidden" /> Business Excellence
                                 </span>
                             </div>
                         </div>
@@ -156,69 +156,67 @@ const Services = () => {
                         ))}
                     </div> :
                     <div
-                        className="relative row-span-10 bg-gradient-to-b from-black to-transparent flex flex-col items-center justify-center text-white p-6"
+                        className="relative row-span-10 bg-gradient-to-b from-black to-transparent flex flex-col items-center justify-center text-white p-6 min-h-screen"
                         style={{
                             background: "linear-gradient(180deg,  #180033 0%, rgba(24, 0, 51, 0) 100%)",
                             transform: "matrix(1, 0, 0, -1, 0, 0)"
                         }}
                     >
-                      
-                            {/* Images Container */}
-                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-4">
-                                {/* Small Images Stack (for Mobile Mode) */}
-                                <div className="flex flex-col items-center space-y-4 md:hidden">
-                                    {[ // Small image data for mobile mode
-                                        { src: "md-1.svg" },
-                                        { src: "md-2.svg" },
-                                        { src: "md-3.svg" },
-                                        { src: "md-4.svg" },
-                                    ].map((img, idx) => (
-                                        <div key={idx} className="w-16 h-16 md:w-20 md:h-20 transform scale-y-[-1]">
-                                            <img
-                                                src={`/assets/Services/${img.src}`}
-                                                alt={`Small ${idx + 1}`}
-                                                className="w-full h-full"
-                                                onMouseEnter={() => handleMouseEnter(idx)}
-                                                onMouseLeave={() => handleMouseLeave(idx)}
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
+                        {/* Images Container */}
+                        <div className="flex flex-col items-center space-y-6 w-full">
+                            {/* Small Images Stack (for Mobile Mode) */}
+                            <div className="flex flex-col items-center space-y-4 md:hidden">
+                                {[
+                                    { src: "md-1.svg" },
+                                    { src: "md-2.svg" },
+                                    { src: "md-3.svg" },
+                                    { src: "md-4.svg" },
+                                ].map((img, idx) => (
+                                    <div key={idx} className="w-36 h-36 max-w-[80%] transform scale-y-[-1]">
+                                        <img
+                                            src={`/assets/Services/${img.src}`}
+                                            alt={`Small ${idx + 1}`}
+                                            className="w-full h-auto"
+                                            onMouseEnter={() => handleMouseEnter(idx)}
+                                            onMouseLeave={() => handleMouseLeave(idx)}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
 
-                                {/* Large Image */}
-                                <div className="w-32 h-32 md:w-48 md:h-48 transform scale-y-[-1]">
-                                    <img
-                                        src={lgImg}
-                                        alt="Large Image"
-                                        className="w-full h-full"
-                                        onMouseEnter={() => setLgImg("/assets/Services/lg-hover.svg")}
-                                        onMouseLeave={() => setLgImg("/assets/Services/lg.svg")}
-                                    />
-                                </div>
+                            {/* Large Image */}
+                            <div className="w-48 h-auto max-w-[90%] md:w-64 transform scale-y-[-1]">
+                                <img
+                                    src={lgImg}
+                                    alt="Large Image"
+                                    className="w-full h-auto"
+                                    onMouseEnter={() => setLgImg("/assets/Services/lg-hover.svg")}
+                                    onMouseLeave={() => setLgImg("/assets/Services/lg.svg")}
+                                />
+                            </div>
 
-                                {/* Small Images Row (for Desktop Mode) */}
-                                <div className="hidden md:flex flex-row items-center justify-center space-x-4">
-                                    {[ // Small image data for desktop mode
-                                        { src: "md-1.svg" },
-                                        { src: "md-2.svg" },
-                                        { src: "md-3.svg" },
-                                        { src: "md-4.svg" },
-                                    ].map((img, idx) => (
-                                        <div key={idx} className="w-36 h-24 md:w-36 md:h-36 transform scale-y-[-1]">
-                                            <img
-                                                src={`/assets/Services/${img.src}`}
-                                                alt={`Medium ${idx + 1}`}
-                                                className="w-full h-full"
-                                                onMouseEnter={() => handleMouseEnter(idx)}
-                                                onMouseLeave={() => handleMouseLeave(idx)}
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
+                            {/* Small Images Row (for Desktop Mode) */}
+                            <div className="hidden md:flex flex-row items-center justify-center space-x-4">
+                                {[
+                                    { src: "md-1.svg" },
+                                    { src: "md-2.svg" },
+                                    { src: "md-3.svg" },
+                                    { src: "md-4.svg" },
+                                ].map((img, idx) => (
+                                    <div key={idx} className="w-36 h-auto max-w-[20%] transform scale-y-[-1]">
+                                        <img
+                                            src={`/assets/Services/${img.src}`}
+                                            alt={`Medium ${idx + 1}`}
+                                            className="w-full h-auto"
+                                            onMouseEnter={() => handleMouseEnter(idx)}
+                                            onMouseLeave={() => handleMouseLeave(idx)}
+                                        />
+                                    </div>
+                                ))}
                             </div>
                         </div>
+                    </div>
 
-                    
                 }
             </div>
         </section>
