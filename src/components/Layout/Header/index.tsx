@@ -8,6 +8,7 @@ const Header = () => {
     //////////////
     const [imageSrc, setImageSrc] = useState("/assets/Header/Property_Default.svg");
     // const [isModalOpen, setIsModalOpen] = useState(false);
+    
     const [currentDate, setCurrentDate] = useState(new Date());
     
     useEffect(() => {
@@ -15,13 +16,13 @@ const Header = () => {
             setIsMobile(window.innerWidth < 768);
         };
 
-        const timer = setInterval(() => {
+        handleResize(); 
+       
             setCurrentDate(new Date());
-        }, 10000);
-        handleResize(); // Set initial state
+       
         window.addEventListener("resize", handleResize);
         return () => {
-            clearInterval(timer);
+       
             window.removeEventListener("resize", handleResize);
            
         }
@@ -30,8 +31,8 @@ const Header = () => {
 
     const daysShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const months = [
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     ];
 
     const dayShort = daysShort[currentDate.getDay()];
