@@ -62,21 +62,21 @@ const Clock = () => {
             className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#180033]"
         >
             {/* Full-Screen Image Wrapper */}
-            <div className={`relative grid  ${isMobile?  "grid-rows-4" : "grid-rows-8" }  w-full h-full`}>
-                <div className={` ${isMobile?  "row-span-1" : "row-span-2" } gap-6 items-center justify-center text-white`}>
+            <div className={`relative grid  ${isMobile ? "grid-rows-4" : "grid-rows-8"}  w-full h-full`}>
+                <div className={` ${isMobile ? "row-span-1" : "row-span-2"} gap-6 items-center justify-center text-white`}>
                     <div className="items-center justify-center p-16 ">
                         <div className="font-lg text-white gap-6">
-                            <span className={` ${isMobile?  "text-3xl" : "text-5xl" } font-semibold text-center leading-tight flex flex-col items-center justify-center`}>Are you ready?</span>
+                            <span className={` ${isMobile ? "text-3xl" : "text-5xl"} font-semibold text-center leading-tight flex flex-col items-center justify-center`}>Are you ready?</span>
                         </div>
                         <div className="text-lg font-sm text-white">
-                            <span className={` ${isMobile?  "text-xl" : "text-3xl" }  text-center leading-tight flex flex-col items-center justify-center`}>
+                            <span className={` ${isMobile ? "text-xl" : "text-3xl"}  text-center leading-tight flex flex-col items-center justify-center`}>
                                 Count down to Beta Launch
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <div className={` ${isMobile?  "row-span-1" : "row-span-2" } flex flex-col justify-center items-center`}>
+                <div className={` ${isMobile ? "row-span-1" : "row-span-2"} flex flex-col justify-center items-center`}>
                     <div className={`grid grid-cols-4 gap-6 transform ${isFlipped ? "rotate-180" : ""}`}>
                         {[
                             { label: "days", value: timeLeft.days, img: "clock1.svg" },
@@ -94,7 +94,7 @@ const Clock = () => {
                                 </div>
 
                                 {/* Label Below the SVG */}
-                                <p className={` ${isMobile?  "text-lg" : "text-2xl" } text-white`}>{item.label}</p>
+                                <p className={` ${isMobile ? "text-lg" : "text-2xl"} text-white`}>{item.label}</p>
                             </div>
                         ))}
                     </div>
@@ -104,11 +104,20 @@ const Clock = () => {
 
                 <div className="row-span-2 flex flex-col justify-center items-center p-4">
                     <div className="text-lg font-sm text-white mb-12">
-                        <span className="text-xl text-center leading-tight flex flex-col items-center justify-center">
-                            Be the First to Experience the Future. 🚀<br />
-                            Join our exclusive waiting list and get early<br className="block md:hidden" /> access to groundbreaking features.<br />
-                            Don’t miss out – secure your spot today!
-                        </span>
+                        {isMobile ?
+                            <span className="text-lg text-center leading-tight flex flex-col items-center justify-center">
+                                Be the First to Experience the Future. 🚀<br />
+                                Join our exclusive waiting list and get early access to groundbreaking features.
+                                Don’t miss out – secure your spot today!
+                            </span>
+                            :
+                            <span className="text-xl text-center leading-tight flex flex-col items-center justify-center">
+                                Be the First to Experience the Future. 🚀<br />
+                                Join our exclusive waiting list and get early access to groundbreaking features.<br />
+                                Don’t miss out – secure your spot today!
+                            </span>
+                        }
+
                     </div>
 
                     <div className="text-white">

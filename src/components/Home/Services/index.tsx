@@ -154,7 +154,8 @@ const Services = () => {
                                     onMouseLeave={() => handleMouseLeave(idx)} />
                             </div>
                         ))}
-                    </div> :
+                    </div> 
+                    :
                     <div
                         className="relative row-span-10 bg-gradient-to-b from-black to-transparent flex flex-col items-center justify-center text-white p-6 min-h-screen"
                         style={{
