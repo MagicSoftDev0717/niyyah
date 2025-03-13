@@ -41,6 +41,29 @@ const Header = () => {
     const year = currentDate.getFullYear();
 
 
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedLang, setSelectedLang] = useState("EN");
+
+    const languages = [
+        { code: "AR", name: "Arabic" },
+        { code: "EN", name: "English (US)" },
+        { code: "EN", name: "English (UK)" },
+        { code: "HI", name: "Hindi" },
+        { code: "UR", name: "Urdu" },
+        { code: "BN", name: "Bengali" },
+        { code: "ZH", name: "Mandarin" },
+        { code: "ES", name: "Spanish" },
+        { code: "FR", name: "French" },
+        { code: "RU", name: "Russian" },
+        { code: "ID", name: "Indonesian" },
+        { code: "TR", name: "Turkish" },
+        { code: "SW", name: "Swahili" },
+        { code: "MS", name: "Malay" },
+        { code: "DE", name: "German" },
+        { code: "JA", name: "Japanese" },
+    ];
+
+
     return (
         <header className="fixed top-0 z-50 w-full bg-black text-white shadow-lg">
             <div className="container mx-auto px-4 py-4">
@@ -79,17 +102,34 @@ const Header = () => {
                                 </div>
                             </div>
                             <div className="flex justify-between w-full md:w-auto gap-6">
-                                <div className="flex items-center space-x-4">
+                                <div className="flex items-center space-x-4" onClick={() => setIsOpen(!isOpen)}>
                                     <Image
                                         src="/assets/Header/Default_Lang.svg"
                                         alt="Language"
                                         width={24}
                                         height={24}
                                     />
-                                    <span className="text-white hover:text-yellow-500">EN</span>
+                                    <span className="text-white hover:text-yellow-500" >{selectedLang}</span>
                                     <button className="border border-white px-4 py-1">Join Free</button>
                                 </div>
+                                {isOpen && (
+                                    <div className="absolute top-full w-36 bg-black text-white shadow-lg">
+                                        {languages.map((lang, index) => (
+                                            <div
+                                                key={index}
+                                                className="px-4 py-2 hover:text-black hover:bg-white cursor-pointer"
+                                                onClick={() => {
+                                                    setSelectedLang(lang.code);
+                                                    setIsOpen(false);
+                                                }}
+                                            >
+                                                <span className="font-bold"> {lang.code}</span><span>&nbsp;&nbsp;{lang.name} </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
+
                         </div>
                     </div>
                     :
@@ -101,16 +141,32 @@ const Header = () => {
                                 <Image src="/assets/Logo/Logo_Niyyah.svg" alt="Logo" width={160} height={80} />
                             </div>
 
-                            <div className="flex items-center space-x-4">
+                            <div className="relative flex items-center space-x-4" onClick={() => setIsOpen(!isOpen)}>
                                 <Image
                                     src="/assets/Header/Default_Lang.svg"
                                     alt="Language"
                                     width={24}
                                     height={24}
                                 />
-                                <span className="text-white hover:text-yellow-500">EN</span>
+                                <span className="text-white hover:text-yellow-500">{selectedLang}</span>
                                 <button className="border border-white px-4 py-1">Join Free</button>
                             </div>
+                            {isOpen && (
+                                <div className="absolute right-10 top-full w-40 bg-black text-white shadow-lg">
+                                    {languages.map((lang, index) => (
+                                        <div
+                                            key={index}
+                                            className="px-4 py-2 hover:text-black hover:bg-white cursor-pointer"
+                                            onClick={() => {
+                                                setSelectedLang(lang.code);
+                                                setIsOpen(false);
+                                            }}
+                                        >
+                                            <span className="font-bold"> {lang.code}</span><span>&nbsp;&nbsp;{lang.name} </span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
 
                         </div>
 
@@ -133,7 +189,9 @@ const Header = () => {
                             </div>
                         </div>
                     </div>}
+
             </div>
+
         </header>
     );
 };
