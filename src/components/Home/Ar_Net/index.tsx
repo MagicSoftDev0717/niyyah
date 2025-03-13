@@ -87,77 +87,143 @@ const AI_Net = () => {
 
     return (
         <section className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#000833]">
-            {/* Full-Screen Image Wrapper */}
-            <div className={`relative grid  ${isMobile ? "" : "grid-cols-12"}  w-full h-full`}>
+            {!isMobile ?
+                <div className={`relative grid ${isMobile ? "" : "grid-cols-12 h-screen"} w-full`}>
 
-                <div className="col-span-2 flex flex-col items-start justify-center">
+                    <div className="col-span-2 flex flex-col items-start justify-center">
 
-                </div>
-                <div className="relative col-span-4 grid grid-rows-4 flex flex-col items-start justify-center text-white">
-                    <div className="row-span-1 mb-4">
-                        <span className="flex flex-col mb-8"></span>
-                        <span className="flex flex-col mb-8"></span>
-                        <span className="text-5xl font-bold text-left leading-tight flex flex-col justify-center mb-12">AR Network</span>
-                        <span className="text-2xl text-left leading-tight flex flex-col justify-center mb-8">
-                            The Ummah’s Augmented Reality Network<br /> Creating Immersive Experiences
-                        </span>
-                        <span className="text-lg text-left leading-tight flex flex-col justify-center">
-                            Bring your ideas to life with cutting-edge AR technology! Enhance customer engagement, create
-                            immersive experiences, and elevate your brand with interactive, next-gen solutions. Whether for
-                            marketing, training, or product visualization — AR takes your business to the future.
-                        </span>
                     </div>
+                    <div className="relative col-span-4 grid grid-rows-4 flex flex-col items-start justify-center text-white">
+                        <div className="row-span-1 mb-4">
+                            <span className="flex flex-col mb-8"></span>
+                            <span className="flex flex-col mb-8"></span>
+                            <span className="text-5xl font-bold text-left leading-tight flex flex-col justify-center mb-12">AR Network</span>
+                            <span className="text-2xl text-left leading-tight flex flex-col justify-center mb-8">
+                                The Ummah’s Augmented Reality Network<br /> Creating Immersive Experiences
+                            </span>
+                            <span className="text-lg text-left leading-tight flex flex-col justify-center">
+                                Bring your ideas to life with cutting-edge AR technology! Enhance customer engagement, create
+                                immersive experiences, and elevate your brand with interactive, next-gen solutions. Whether for
+                                marketing, training, or product visualization — AR takes your business to the future.
+                            </span>
+                        </div>
 
-                    <div className="relative row-span-2 grid grid-cols-3 grid-rows-3 mb-2">
+                        <div className="relative row-span-2 grid grid-cols-3 grid-rows-3 mb-2">
 
-                        {arImgs.map((imgSrc, idx) => (
-                            <div key={idx} className="flex items-center justify-left gap-4 mb-6">
-                                <img
-                                    src={`/assets/AR/${imgSrc}`}
-                                    alt={`Image ${idx + 1}`}
-                                    className="w-48 h-auto object-contain"
-                                    onMouseEnter={() => handleMouseEnter(idx)}
-                                    onMouseLeave={() => handleMouseLeave(idx)}
-                                    onClick={() => handleImageClick(idx)} />
-                            </div>
-                        ))}
-                        <button
-                            className="px-8 md:px-8 py-3 md:py-1 bg-purple-600 text-white font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
-                            style={{
-                                fontSize: "clamp(1rem, 2vw, 1.5rem)", // Adjusts button text size dynamically
-                            }}
-                        >Join Waiting
-                        </button>
-                    </div>
-                    {/* <div className="row-span-1">
+                            {arImgs.map((imgSrc, idx) => (
+                                <div key={idx} className="flex items-center justify-left gap-4 mb-6">
+                                    <img
+                                        src={`/assets/AR/${imgSrc}`}
+                                        alt={`Image ${idx + 1}`}
+                                        className="w-48 h-auto object-contain"
+                                        onMouseEnter={() => handleMouseEnter(idx)}
+                                        onMouseLeave={() => handleMouseLeave(idx)}
+                                        onClick={() => handleImageClick(idx)} />
+                                </div>
+                            ))}
+                            <button
+                                className="px-8 md:px-8 py-3 md:py-1 bg-purple-600 text-white font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
+                                style={{
+                                    fontSize: "clamp(1rem, 2vw, 1.5rem)", // Adjusts button text size dynamically
+                                }}
+                            >Join Waiting
+                            </button>
+                        </div>
+                        {/* <div className="row-span-1">
 
                     </div> */}
 
-                    <div className="row-span-1"></div>
-                    {popupImg && (
-                        <div className="fixed inset-0 flex items-bottom justify-center bg-black bg-opacity-60 z-50" onClick={handleClosePopup} >
-                            <img
-                                src={`/assets/AR/${popupImg}`}
-                                alt="Popup"
-                                className="w-1/2 h-auto object-cover"
-                            />
+                        <div className="row-span-1"></div>
+                        {popupImg && (
+                            <div className="fixed inset-0 flex items-bottom justify-center bg-black bg-opacity-60 z-50" onClick={handleClosePopup} >
+                                <img
+                                    src={`/assets/AR/${popupImg}`}
+                                    alt="Popup"
+                                    className="w-1/2 h-auto object-cover"
+                                />
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="col-span-4 flex flex-col items-start justify-top" style={{ marginTop: '1.5em' }}>
+                        <img
+                            src="/assets/AR/AR-human.svg"
+                            alt="AR Human"
+                            className="w-full h-auto object-contain"
+                        />
+                    </div>
+                    <div className="col-span-2 flex flex-col items-start justify-center text-white">
+
+                    </div>
+
+                </div>
+                :
+                <div className={`relative grid ${isMobile ? "grid row-7" : "grid-cols-12 h-screen"} w-full`}>
+
+                    <div className="relative row-span-1 col-span-1 flex flex-col items-start justify-center">
+
+                    </div>
+                    <div className="relative row-span-6 col-span-10 grid grid-rows-4 flex flex-col items-start justify-center text-white">
+                        <div className="row-span-1 mb-4">
+                            <span className="flex flex-col mb-8"></span>
+                            <span className="flex flex-col mb-8"></span>
+                            <span className="text-4xl font-bold text-left leading-tight flex flex-col justify-center mb-12">AR Network</span>
+                            <span className="text-xl text-left leading-tight flex flex-col justify-center mb-8">
+                                The Ummah’s Augmented Reality Network Creating Immersive Experiences
+                            </span>
+
                         </div>
-                    )}
-                </div>
 
-                <div className="col-span-4 flex flex-col items-start justify-top" style={{ marginTop: '1.5em' }}>
-                    <img
-                        src="/assets/AR/AR-human.svg"
-                        alt="AR Human"
-                        className="w-full h-auto object-contain"
-                    />
-                </div>
-                <div className="col-span-2 flex flex-col items-start justify-center text-white">
+                        <div className="row-span-4 flex flex-col items-start justify-start gap-4 ">
+                            <img
+                                src="/assets/AR/AR-human.svg"
+                                alt="AR Human"
+                                className="w-full h-auto object-contain"
+                            />
+                            <span className="text-sm text-left leading-tight flex flex-col justify-center mx-auto px-6 md:px-12">
+                                Bring your ideas to life with cutting-edge AR technology! Enhance customer engagement, create
+                                immersive experiences, and elevate your brand with interactive, next-gen solutions. Whether for
+                                marketing, training, or product visualization — AR takes your business to the future.
+                            </span>
+                        </div>
 
+                        <div className="relative row-span-2 grid grid-cols-3 mb-2">
 
-                </div>
+                            {arImgs.map((imgSrc, idx) => (
+                                <div key={idx} className="flex items-center justify-left gap-2 mb-2 mx-auto px-4 md:px-12">
+                                    <img
+                                        src={`/assets/AR/${imgSrc}`}
+                                        alt={`Image ${idx + 1}`}
+                                        className="w-48 h-auto object-contain"
+                                        onMouseEnter={() => handleMouseEnter(idx)}
+                                        onMouseLeave={() => handleMouseLeave(idx)}
+                                        onClick={() => handleImageClick(idx)} />
+                                </div>
+                            ))}
+                            <button
+                                className="px-8 md:px-8 py-3 md:py-1 bg-purple-600 text-white font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
+                                style={{
+                                    fontSize: "clamp(1rem, 2vw, 1.5rem)", // Adjusts button text size dynamically
+                                }}
+                            >Join Waiting
+                            </button>
+                        </div>
+                        {/* <div className="row-span-1">
 
-            </div>
+                    </div> */}
+
+                        <div className="row-span-1"></div>
+                        {popupImg && (
+                            <div className="fixed inset-0 flex items-bottom justify-center bg-black bg-opacity-60 z-50" onClick={handleClosePopup} >
+                                <img
+                                    src={`/assets/AR/${popupImg}`}
+                                    alt="Popup"
+                                    className="w-1/2 h-auto object-cover"
+                                />
+                            </div>
+                        )}
+                    </div>
+                </div>}
         </section>
     );
 };
