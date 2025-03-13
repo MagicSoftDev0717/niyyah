@@ -180,7 +180,7 @@ const AI_Net = () => {
                                 alt="AR Human"
                                 className="w-full h-auto object-contain"
                             />
-                            <span className="text-sm text-left leading-tight flex flex-col justify-center mx-auto px-6 md:px-12">
+                            <span className="text-medium text-left leading-tight flex flex-col justify-center mx-auto px-6 md:px-12">
                                 Bring your ideas to life with cutting-edge AR technology! Enhance customer engagement, create
                                 immersive experiences, and elevate your brand with interactive, next-gen solutions. Whether for
                                 marketing, training, or product visualization — AR takes your business to the future.
