@@ -20,10 +20,6 @@ const Hero = () => {
         <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
             {/* Full-Screen Image Wrapper */}
             <div className="relative w-full h-full">
-
-                {/* Image */}
-
-
                 {!isMobile && (
                     <Image
                         src="/assets/Hero/Photo222.svg"
@@ -34,11 +30,8 @@ const Hero = () => {
                         priority
                         className="md:object-contain block"
                     />
-
-
                 )}
-
-                {/* Mobile Image */}
+              
                 {isMobile && (
                     <Image
                         src="/assets/Hero/m_hero.svg" // Your mobile-specific image path
@@ -54,8 +47,14 @@ const Hero = () => {
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-80"></div>
 
+                <div className="absolute bottom-0 w-full h-1/6 bg-gradient-to-b from-black via-transparent to-transparent md:block hidden"
+                 style={{
+                    background: "linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%)",
+                    transform: "matrix(1, 0, 0, -1, 0, 0)",
+                  }}></div>
+
                 {/* Content Section: Positioned at the bottom 1/5 of the screen */}
-                <div className="absolute bottom-1/7 w-full flex flex-col items-center justify-center text-white text-center px-6">
+                <div className="absolute bottom-1/6 w-full flex flex-col items-center justify-center text-white text-center px-6">
                     {/* Responsive Heading */}
                     <h2
                         className="leading-tight font-bold"

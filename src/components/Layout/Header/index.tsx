@@ -113,7 +113,7 @@ const Header = () => {
                                     <button className="border border-white px-4 py-1">Join Free</button>
                                 </div>
                                 {isOpen && (
-                                    <div className="absolute top-full w-36 bg-black text-white shadow-lg">
+                                    <div className="absolute top-full w-40 bg-black text-white shadow-lg">
                                         {languages.map((lang, index) => (
                                             <div
                                                 key={index}
