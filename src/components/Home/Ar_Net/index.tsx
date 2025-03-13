@@ -86,7 +86,7 @@ const AI_Net = () => {
 
 
     return (
-        <section className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#180033]">
+        <section className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#000833]">
             {/* Full-Screen Image Wrapper */}
             <div className={`relative grid  ${isMobile ? "" : "grid-cols-12"}  w-full h-full`}>
 

@@ -18,9 +18,9 @@ const AI_Busi = () => {
     }, []);
 
     return (
-        <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative w-full flex items-center justify-center overflow-visible">
 
-            <div className="relative w-full h-full flex flex-col items-center justify-center">
+            <div className={`relative w-full grid grid ${isMobile ? "grid-rows-auto min-h-screen" : "grid-rows-8 h-screen"} flex flex-col items-center justify-center`}>
 
                 {!isMobile && (
                     <Image
@@ -46,31 +46,35 @@ const AI_Busi = () => {
                     />
                 )}
 
-                <div className={`relative row-span-2 grid ${isMobile ? "grid-cols-9" : "grid-cols-7"} gap-3`}
+                <div className={`relative row-span-2 grid ${isMobile ? "grid-cols-10" : "grid-cols-7"} gap-3`}
                     style={{ background: "linear-gradient(180deg, #000833 0%, rgba(0, 8, 51, 0) 100%)" }}>
+
                     <div className="col-span-1">
 
                     </div>
-                    <div className={`  ${isMobile ? "col-span-7" : "col-span-5"}`}>
+                    <div className={`  ${isMobile ? "col-span-8" : "col-span-5"}`}>
                         <div className="items-center justify-center">
                             <div className="row-span-1 text-white mb-4">
                                 <div className="flex items-center gap-x-4 mb-12">
                                     <span className={`${isMobile ? "text-3xl text-left" : "text-5xl text-center"} font-bold leading-tight`}>Meet the AI Team</span>
                                 </div>
-                                <span className={`${isMobile ? "text-lg" : "text-4xl"} text-center leading-tight flex flex-col justify-center mb-12`}>
+                                <span className={`${isMobile ? "text-xl" : "text-4xl"} text-center leading-tight flex flex-col justify-center mb-12`}>
                                     AI Experts Driven by Sincerity and Passion
                                 </span>
-                                <span className={`${isMobile ? "text-medium" : "text-3xl"} text-center leading-tight flex flex-col justify-center`}>
-                                    Supercharge your business with Intelligent Al Experts and AI Influencers designed to
+                                <span className={`${isMobile ? "text-lg" : "text-2xl"} text-center leading-tight flex flex-col justify-center`}>
+                                    Supercharge your business with Intelligent Al Experts and AI Influencers designed<br className="block md:inline" />to
                                     help you Start or Grow Your Business Mission.
                                 </span>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div className="col-span-1">
 
-                <div className={`relative flex ${isMobile ? "flex-wrap" : "grid grid-cols-5"} 
-                items-center justify-center text-white gap-6 w-full min-h-screen overflow-visible`}
+                    </div>
+                </div>
+                 
+                <div className={`relative row-span-4 flex ${isMobile ? "flex-wrap" : "grid grid-cols-5"} 
+                    items-center justify-center text-white gap-6 w-full min-h-screen overflow-visible`}
                     style={{ color: '#A18FF7' }}>
                     <div></div>
 
@@ -98,10 +102,8 @@ const AI_Busi = () => {
                 <div className="relative row-span-2 gap-3 flex flex-col items-top justify-center text-white"
                     style={{
                         background: "linear-gradient(180deg, #000833 0%, rgba(0, 8, 51, 0) 100%)",
-                        transform: "matrix(1, 0, 0, -1, 0, 0)"
-                    }}>
+                        transform: "matrix(1, 0, 0, -1, 0, 0)"}}>
                     <div className="flex flex-col items-center justify-center transform scale-y-[-1]">
-                        {/* Responsive Heading */}
 
                         <span className={`${isMobile ? "text-lg" : "text-2xl"} text-center leading-tight flex flex-col items-center justify-center mb-4 font-bold`}>
                             Ready to Start or Scale your Business?
@@ -110,14 +112,9 @@ const AI_Busi = () => {
                             Unlock the power of AI-driven entrepreneurship. Join now and take your business to the next level!
                         </span>
 
-                        {/* Responsive Button */}
                         <button
-
                             className="px-8 md:px-12 py-2 md:py-2 bg-purple-600 text-white font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
-                            style={{
-                                fontSize: "clamp(1rem, 2vw, 1.5rem)", // Adjusts button text size dynamically
-                            }}
-                        >
+                            style={{fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
                             Join Now
                         </button>
                     </div>
