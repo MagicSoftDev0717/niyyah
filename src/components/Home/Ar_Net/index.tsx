@@ -134,7 +134,15 @@ const AI_Net = () => {
                     </div> */}
 
                     <div className="row-span-1"></div>
-
+                    {popupImg && (
+                        <div className="fixed inset-0 flex items-bottom justify-center bg-black bg-opacity-60 z-50" onClick={handleClosePopup} >
+                            <img
+                                src={`/assets/AR/${popupImg}`}
+                                alt="Popup"
+                                className="w-1/2 h-auto object-cover"
+                            />
+                        </div>
+                    )}
                 </div>
 
                 <div className="col-span-4 flex flex-col items-start justify-top" style={{ marginTop: '1.5em' }}>
