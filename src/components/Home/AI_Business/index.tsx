@@ -19,9 +19,9 @@ const AI_Busi = () => {
 
     return (
         <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Full-Screen Image Wrapper */}
+
             <div className="relative w-full h-full flex flex-col items-center justify-center">
-                {/* Desktop Image */}
+
                 {!isMobile && (
                     <Image
                         src="/assets/AI_business/AI.svg" // Your desktop image path
@@ -32,11 +32,8 @@ const AI_Busi = () => {
                         priority
                         className="block"
                     />
-
-
                 )}
 
-                {/* Mobile Image */}
                 {isMobile && (
                     <Image
                         src="/assets/AI_business/m_AI business.svg" // Your mobile-specific image path
@@ -49,21 +46,21 @@ const AI_Busi = () => {
                     />
                 )}
 
-                <div className="relative row-span-2 grid grid-cols-6 gap-3 text-white"
-                    style={{ background: "linear-gradient(180deg, #000833 0%, rgba(0, 8, 51, 0) 100)" }}>
+                <div className={`relative row-span-2 grid ${isMobile ? "grid-cols-9" : "grid-cols-7"} gap-3`}
+                    style={{ background: "linear-gradient(180deg, #000833 0%, rgba(0, 8, 51, 0) 100%)" }}>
                     <div className="col-span-1">
 
                     </div>
-                    <div className="col-span-4">
+                    <div className={`  ${isMobile ? "col-span-7" : "col-span-5"}`}>
                         <div className="items-center justify-center">
                             <div className="row-span-1 text-white mb-4">
-                                <div className="flex items-center gap-x-4 mb-8">
-                                    <span className={`${isMobile ? "text-3xl text-right" : "text-5xl text-left"} font-bold leading-tight`}>Meet the AI Team</span>
+                                <div className="flex items-center gap-x-4 mb-12">
+                                    <span className={`${isMobile ? "text-3xl text-left" : "text-5xl text-center"} font-bold leading-tight`}>Meet the AI Team</span>
                                 </div>
-                                <span className={`${isMobile ? "text-1xl" : "text-3xl"} text-center leading-tight flex flex-col justify-center mb-8`}>
+                                <span className={`${isMobile ? "text-lg" : "text-4xl"} text-center leading-tight flex flex-col justify-center mb-12`}>
                                     AI Experts Driven by Sincerity and Passion
                                 </span>
-                                <span className={`${isMobile ? "text-sm" : "text-xl"} text-center leading-tight flex flex-col justify-between`}>
+                                <span className={`${isMobile ? "text-medium" : "text-3xl"} text-center leading-tight flex flex-col justify-center`}>
                                     Supercharge your business with Intelligent Al Experts and AI Influencers designed to
                                     help you Start or Grow Your Business Mission.
                                 </span>
@@ -110,7 +107,7 @@ const AI_Busi = () => {
                             Ready to Start or Scale your Business?
                         </span>
                         <span className={`${isMobile ? "text-medium" : "text-lg"} text-center leading-tight flex flex-col items-center justify-center mb-4`}>
-                            Unlock the power of AI-driven<br /> entrepreneurship. Join now and take your<br /> business to the next level!
+                            Unlock the power of AI-driven entrepreneurship. Join now and take your business to the next level!
                         </span>
 
                         {/* Responsive Button */}

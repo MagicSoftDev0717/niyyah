@@ -83,7 +83,7 @@ const Services = () => {
                             <div className="row-span-1 text-white mb-4">
                                 <div className="flex items-center gap-x-4 mb-8">
                                     <img src="/assets/AboutUs/NE.svg" alt="Vision Icon" className="w-24 h-24" />
-                                    <span className="text-5xl font-bold text-left leading-tight">Solutions For You</span>
+                                    <span className="text-5xl font-bold text-left">Solutions For You</span>
                                 </div>
                                 <span className="text-3xl text-center leading-tight flex flex-col justify-center">
                                     Niyyah for Success. Achieve Business Excellence
