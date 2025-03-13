@@ -104,7 +104,7 @@ const Services = () => {
                                     <img
                                         src="/assets/AboutUs/NE.svg"
                                         alt="Vision Icon"
-                                        className="w-24 h-24 flex-shrink-0"
+                                        className="w-16 h-16 flex-shrink-0"
                                     />
 
                                     {/* Solutions Text */}
