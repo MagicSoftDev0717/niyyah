@@ -90,15 +90,15 @@ const Hero = () => {
                         </div>
                         :
                         <div
-                            className="row-span-5 grid grid-cols-9 bg-gradient-to-b from-black to-transparent"
-                         >
+                            className="row-span-5 grid grid-cols-9 bg-gradient-to-b from-black to-transparent">
+                         
 
                             <div className="col-span-1 flex flex-col items-start justify-center text-white">
 
                             </div>
                             <div className="col-span-7 flex flex-col items-center justify-center text-white gap-6">
                                 <div className="row-span-1 mb-4">
-                                    <div className="flex items-center  gap-x-4 text-left mb-96">
+                                    <div className="flex items-center justify-left  gap-x-4 text-left mb-96">
                                         <span className="text-4xl font-bold text-left leading-tight whitespace-nowrap">Vision Behind</span>
                                         <img src="/assets/AboutUs/NE.svg" alt="Vision Icon" className="w-16 h-16" />
                                     </div>

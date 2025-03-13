@@ -93,29 +93,29 @@ const Services = () => {
                     </div>
                     :
                     <div
-                        className="relative row-span-2 grid grid-cols-6 bg-gradient-to-b from-black to-transparent"
-                       
-                    >
+                        className="relative row-span-2 grid grid-cols-6 bg-gradient-to-b from-black to-transparent">
+
                         <div className="col-span-1"></div>
 
                         <div className="col-span-4">
                             <div className="row-span-1 text-white mb-4">
-                                <div className="flex items-start gap-x-4 mb-8">
+                                <div className="flex flex-row items-center gap-x-4 mb-8">
                                     {/* Vision Icon */}
                                     <img
                                         src="/assets/AboutUs/NE.svg"
                                         alt="Vision Icon"
-                                        className="w-16 h-16 flex-shrink-0"
+                                        className="w-24 h-24 flex-shrink-0"
                                     />
 
                                     {/* Solutions Text */}
                                     <span className="text-4xl md:text-5xl font-bold text-left leading-tight">
                                         <span className="inline-block">Solutions</span>
-                                        <br className="block md:hidden" /> {/* Line break only in mobile */}
-                                        <span className="block md:hidden pl-[6rem]">For You</span> {/* Indents 'For You' to match image */}
-                                        <span className="hidden md:inline"> For You</span> {/* Normal layout on desktop */}
+                                        <span className="block md:inline"> For You</span> {/* 'For You' on the next line in mobile */}
                                     </span>
                                 </div>
+
+
+
 
                                 {/* Updated Span for Mobile Two-Line Display */}
                                 <span
@@ -129,31 +129,97 @@ const Services = () => {
 
                 }
 
-                <div
-                    className="relative row-span-10 bg-gradient-to-b from-black to-transparent flex flex-col items-center justify-center text-white p-6"
-                    style={{ background: "linear-gradient(180deg,  #180033 0%, rgba(24, 0, 51, 0) 100%)", transform: "matrix(1, 0, 0, -1, 0, 0)" }}>
-                    {/* Center Large Image */}
+                {!isMobile ?
+                    <div
+                        className="relative row-span-10 bg-gradient-to-b from-black to-transparent flex flex-col items-center justify-center text-white p-6"
+                        style={{ background: "linear-gradient(180deg,  #180033 0%, rgba(24, 0, 51, 0) 100%)", transform: "matrix(1, 0, 0, -1, 0, 0)" }}>
+                        {/* Center Large Image */}
 
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <img src={lgImg} alt="Large Center Image" className="transform scale-y-[-1]"
-                            onMouseEnter={() => setLgImg("/assets/Services/lg-hover.svg")}
-                            onMouseLeave={() => setLgImg("/assets/Services/lg.svg")} />
-                    </div>
-
-
-                    {[
-                        { top: "26%", left: "32%", src: "md-1.svg" },
-                        { top: "28%", right: "22%", src: "md-2.svg" },
-                        { bottom: "20%", left: "30%", src: "md-3.svg" },
-                        { bottom: "22%", right: "20%", src: "md-4.svg" },
-                    ].map((img, idx) => (
-                        <div key={idx} className="absolute" style={{ top: img.top, left: img.left, right: img.right, bottom: img.bottom, transform: "translate(-50%, -50%)" }}>
-                            <img src={`/assets/Services/${mediumImages[idx]}`} alt={`Medium ${idx + 1}`} className="w-35 h-35 transform scale-y-[-1]"
-                                onMouseEnter={() => handleMouseEnter(idx)}
-                                onMouseLeave={() => handleMouseLeave(idx)} />
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <img src={lgImg} alt="Large Center Image" className="transform scale-y-[-1]"
+                                onMouseEnter={() => setLgImg("/assets/Services/lg-hover.svg")}
+                                onMouseLeave={() => setLgImg("/assets/Services/lg.svg")} />
                         </div>
-                    ))}
-                </div>
+
+
+                        {[
+                            { top: "26%", left: "32%", src: "md-1.svg" },
+                            { top: "28%", right: "22%", src: "md-2.svg" },
+                            { bottom: "20%", left: "30%", src: "md-3.svg" },
+                            { bottom: "22%", right: "20%", src: "md-4.svg" },
+                        ].map((img, idx) => (
+                            <div key={idx} className="absolute" style={{ top: img.top, left: img.left, right: img.right, bottom: img.bottom, transform: "translate(-50%, -50%)" }}>
+                                <img src={`/assets/Services/${mediumImages[idx]}`} alt={`Medium ${idx + 1}`} className="w-35 h-35 transform scale-y-[-1]"
+                                    onMouseEnter={() => handleMouseEnter(idx)}
+                                    onMouseLeave={() => handleMouseLeave(idx)} />
+                            </div>
+                        ))}
+                    </div> :
+                    <div
+                        className="relative row-span-10 bg-gradient-to-b from-black to-transparent flex flex-col items-center justify-center text-white p-6"
+                        style={{
+                            background: "linear-gradient(180deg,  #180033 0%, rgba(24, 0, 51, 0) 100%)",
+                            transform: "matrix(1, 0, 0, -1, 0, 0)"
+                        }}
+                    >
+                      
+                            {/* Images Container */}
+                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-4">
+                                {/* Small Images Stack (for Mobile Mode) */}
+                                <div className="flex flex-col items-center space-y-4 md:hidden">
+                                    {[ // Small image data for mobile mode
+                                        { src: "md-1.svg" },
+                                        { src: "md-2.svg" },
+                                        { src: "md-3.svg" },
+                                        { src: "md-4.svg" },
+                                    ].map((img, idx) => (
+                                        <div key={idx} className="w-16 h-16 md:w-20 md:h-20 transform scale-y-[-1]">
+                                            <img
+                                                src={`/assets/Services/${img.src}`}
+                                                alt={`Small ${idx + 1}`}
+                                                className="w-full h-full"
+                                                onMouseEnter={() => handleMouseEnter(idx)}
+                                                onMouseLeave={() => handleMouseLeave(idx)}
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Large Image */}
+                                <div className="w-32 h-32 md:w-48 md:h-48 transform scale-y-[-1]">
+                                    <img
+                                        src={lgImg}
+                                        alt="Large Image"
+                                        className="w-full h-full"
+                                        onMouseEnter={() => setLgImg("/assets/Services/lg-hover.svg")}
+                                        onMouseLeave={() => setLgImg("/assets/Services/lg.svg")}
+                                    />
+                                </div>
+
+                                {/* Small Images Row (for Desktop Mode) */}
+                                <div className="hidden md:flex flex-row items-center justify-center space-x-4">
+                                    {[ // Small image data for desktop mode
+                                        { src: "md-1.svg" },
+                                        { src: "md-2.svg" },
+                                        { src: "md-3.svg" },
+                                        { src: "md-4.svg" },
+                                    ].map((img, idx) => (
+                                        <div key={idx} className="w-36 h-24 md:w-36 md:h-36 transform scale-y-[-1]">
+                                            <img
+                                                src={`/assets/Services/${img.src}`}
+                                                alt={`Medium ${idx + 1}`}
+                                                className="w-full h-full"
+                                                onMouseEnter={() => handleMouseEnter(idx)}
+                                                onMouseLeave={() => handleMouseLeave(idx)}
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                    
+                }
             </div>
         </section>
     );
