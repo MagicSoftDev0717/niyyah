@@ -62,7 +62,7 @@ const AI_Busi = () => {
                                     AI Experts Driven by Sincerity and Passion
                                 </span>
                                 <span className={`${isMobile ? "text-lg" : "text-2xl"} text-center leading-tight flex flex-col justify-center`}>
-                                    Supercharge your business with Intelligent Al Experts and AI Influencers designed<br className="block md:inline" />to
+                                    Supercharge your business with Intelligent Al Experts and AI Influencers designed to
                                     help you Start or Grow Your Business Mission.
                                 </span>
                             </div>
@@ -74,24 +74,24 @@ const AI_Busi = () => {
                 </div>
                  
                 <div className={`relative row-span-4 flex ${isMobile ? "flex-wrap" : "grid grid-cols-5"} 
-                    items-center justify-center text-white gap-6 w-full min-h-screen overflow-visible`}
+                    items-center justify-center text-white gap-12 w-full min-h-screen overflow-visible`}
                     style={{ color: '#A18FF7' }}>
                     <div></div>
 
 
-                    <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col items-center gap-2">
                         <img src="/assets/AI_business/Niyyah_Ai.svg" alt="Image 1" />
                         <span className="text-lg text-white" >Ali AI</span>
                         <span className="text-sm" >Spiritual Coach</span>
                     </div>
 
-                    <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col items-center gap-2">
                         <img src="/assets/AI_business/Group 32.svg" alt="Image 4" />
                         <span className="text-lg text-white">Amina AI</span>
                         <span className="text-sm" >Marriage Coach</span>
                     </div>
 
-                    <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col items-center gap-2">
                         <img src="/assets/AI_business/Group 31.svg" alt="Image 7" />
                         <span className="text-lg text-white">Bilal AI</span>
                         <span className="text-sm" >Fitness Coach</span>
