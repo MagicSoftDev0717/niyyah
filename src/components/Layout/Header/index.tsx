@@ -8,7 +8,7 @@ const Header = () => {
     //////////////
     const [imageSrc, setImageSrc] = useState("/assets/Header/Property_Default.svg");
     // const [isModalOpen, setIsModalOpen] = useState(false);
-    
+
     const [currentDate, setCurrentDate] = useState(new Date());
     
     useEffect(() => {
@@ -127,8 +127,8 @@ const Header = () => {
                             />
 
                             <div className="flex flex-row md:flex-wrap i-center justify-end w-full md:w-auto items-center gap-2 text-center md:text-right">
-                                <p className="text-sm w-1/2 md:w-full">Ramadan 1, 1446 AH </p>
-                                <p className="text-sm w-1/2 md:w-full items-left">March 12, 2025</p>
+                                <p className="text-sm w-1/2 md:w-full">{dayShort}, Ramadan 1, 1446 AH</p>
+                                <p className="text-sm w-1/2 md:w-full items-left">{`${dayShort}, ${monthName} ${date}, ${year}`}</p>
                             </div>
                         </div>
                     </div>}
