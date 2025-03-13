@@ -164,11 +164,11 @@ const AI_Net = () => {
 
                     </div>
                     <div className="relative row-span-6 col-span-10 grid grid-rows-4 flex flex-col items-start justify-center text-white">
-                        <div className="row-span-1 mb-4">
+                        <div className="row-span-1 mx-auto px-6 md:px-12">
                             <span className="flex flex-col mb-8"></span>
                             <span className="flex flex-col mb-8"></span>
                             <span className="text-4xl font-bold text-left leading-tight flex flex-col justify-center mb-12">AR Network</span>
-                            <span className="text-xl text-left leading-tight flex flex-col justify-center mb-8">
+                            <span className="text-2xl text-left leading-tight flex flex-col justify-center mb-8">
                                 The Ummah’s Augmented Reality Network Creating Immersive Experiences
                             </span>
 
