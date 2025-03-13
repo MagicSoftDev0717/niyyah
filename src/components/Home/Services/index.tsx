@@ -121,7 +121,7 @@ const Services = () => {
                                 <span
                                     className="text-2xl md:text-3xl text-center md:text-left leading-tight flex flex-col justify-center w-full md:w-auto max-w-xs mx-auto"
                                 >
-                                    Niyyah for Success.  Achieve <br className="block md:hidden" /> Business Excellence
+                                    Niyyah for Success.<br className="block md:hidden" /> Achieve Business Excellence
                                 </span>
                             </div>
                         </div>
