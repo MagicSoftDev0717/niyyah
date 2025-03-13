@@ -1,21 +1,55 @@
 "use client";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Detect screen size and update isMobile state
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768); // Consider screen width less than 768px as mobile
+        };
+
+        window.addEventListener("resize", handleResize);
+        handleResize(); // Initial check
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     return (
         <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
             {/* Full-Screen Image Wrapper */}
             <div className="relative w-full h-full">
+
                 {/* Image */}
-                <Image
-                    src="/assets/Hero/Hero.svg"
-                    alt="Hero Image"
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="center"
-                    priority
-                    className="md:object-contain block"
-                />
+
+
+                {!isMobile && (
+                    <Image
+                        src="/assets/Hero/Photo222.svg"
+                        alt="Hero Image"
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center"
+                        priority
+                        className="md:object-contain block"
+                    />
+
+
+                )}
+
+                {/* Mobile Image */}
+                {isMobile && (
+                    <Image
+                        src="/assets/Hero/m_hero.svg" // Your mobile-specific image path
+                        alt="About Us"
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center" // Center the image on mobile
+                        priority
+                        className="block"
+                    />
+                )}
 
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-80"></div>
@@ -42,7 +76,7 @@ const Hero = () => {
                     {/* CTA Button */}
                     <button
                         className="mt-6 px-8 md:px-12 py-3 md:py-3 text-white bg-purple-600 font-bold border border-transparent hover:border-white transition-all duration-300"
-                        style={{fontSize: "clamp(1rem, 2vw, 1.5rem)"}}>
+                        style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
                         Let&apos;s Start
                     </button>
                 </div>

@@ -25,7 +25,7 @@ const Hero = () => {
                 {!isMobile && (
                     <Image
                         src="/assets/AboutUs/AboutUs.svg" // Your desktop image path
-                        alt="Hero Image"
+                        alt="About Us"
                         layout="fill"
                         objectFit="cover"
                         objectPosition="center"
@@ -39,8 +39,8 @@ const Hero = () => {
                 {/* Mobile Image */}
                 {isMobile && (
                     <Image
-                        src="/assets/AboutUs/aboutus_mobile.svg" // Your mobile-specific image path
-                        alt="Hero Image"
+                        src="/assets/AboutUs/m_AboutUs.svg" // Your mobile-specific image path
+                        alt="About Us"
                         layout="fill"
                         objectFit="cover"
                         objectPosition="center" // Center the image on mobile
@@ -91,7 +91,7 @@ const Hero = () => {
                         :
                         <div
                             className="row-span-5 grid grid-cols-9 bg-gradient-to-b from-black to-transparent"
-                            style={{ background: "linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%)" }}>
+                         >
 
                             <div className="col-span-1 flex flex-col items-start justify-center text-white">
 
@@ -149,7 +149,8 @@ const Hero = () => {
                             </div>
                         </div>
                         :
-                        <div className="row-span-2 grid grid-cols-6">
+                        <div className="row-span-2 grid grid-cols-6"
+                        >
                             <div className="col-span-1 flex flex-col items-start justify-center text-white">
                             </div>
 
@@ -162,11 +163,8 @@ const Hero = () => {
                             </div>
                         </div>}
                     <div
-                        className="row-span-5 bg-gradient-to-b from-black to-transparent flex flex-col items-center justify-center text-white p-6"
-                        style={{
-                            background: "linear-gradient(180deg, #180033 0%, rgba(24, 0, 51, 0) 100%)",
-                            transform: "matrix(1, 0, 0, -1, 0, 0)",
-                        }}
+                        className="row-span-5  flex flex-col items-center justify-center text-white p-6"
+                        style={{ background: "linear-gradient(180deg,  #180033 0%, rgba(24, 0, 51, 0) 100%)", transform: "matrix(1, 0, 0, -1, 0, 0)" }}
                     >
                     </div>
                 </div>
