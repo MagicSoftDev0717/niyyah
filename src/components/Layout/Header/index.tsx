@@ -10,21 +10,21 @@ const Header = () => {
     // const [isModalOpen, setIsModalOpen] = useState(false);
 
     const [currentDate, setCurrentDate] = useState(new Date());
-    
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
         };
 
-        handleResize(); 
-       
-            setCurrentDate(new Date());
-       
+        handleResize();
+
+        setCurrentDate(new Date());
+
         window.addEventListener("resize", handleResize);
         return () => {
-       
+
             window.removeEventListener("resize", handleResize);
-           
+
         }
     }, []);
 
@@ -40,7 +40,7 @@ const Header = () => {
     const date = currentDate.getDate();
     const year = currentDate.getFullYear();
 
-   
+
     return (
         <header className="fixed top-0 z-50 w-full bg-black text-white shadow-lg">
             <div className="container mx-auto px-4 py-4">
@@ -74,7 +74,7 @@ const Header = () => {
                         <div className="flex justify-between w-full md:w-auto gap-6">
                             <div className="flex items-center space-x-4">
                                 <div className="flex flex-row md:flex-wrap justify-end w-full md:w-auto items-center gap-2 text-center md:text-right">
-                                    <p className="text-sm w-1/2 md:w-full">{dayShort}, Ramadan 1, 1446 AH</p>
+                                    <p className="text-sm w-1/2 md:w-full">Ramadan 1, 1446 AH</p>
                                     <p className="text-sm w-1/2 md:w-full">{`${dayShort}, ${monthName} ${date}, ${year}`}</p>
                                 </div>
                             </div>
@@ -127,8 +127,9 @@ const Header = () => {
                             />
 
                             <div className="flex flex-row md:flex-wrap i-center justify-end w-full md:w-auto items-center gap-2 text-center md:text-right">
-                                <p className="text-sm w-1/2 md:w-full">{dayShort}, Ramadan 1, 1446 AH</p>
                                 <p className="text-sm w-1/2 md:w-full items-left">{`${dayShort}, ${monthName} ${date}, ${year}`}</p>
+                                <p className="text-sm w-1/2 md:w-full">Ramadan 1, 1446 AH</p>
+
                             </div>
                         </div>
                     </div>}
