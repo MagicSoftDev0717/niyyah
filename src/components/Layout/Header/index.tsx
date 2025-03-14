@@ -147,7 +147,7 @@ const Header = () => {
                                     width={32}
                                     height={32}
                                 />
-                                <span className="text-white  underline hover:text-yellow-500"  onClick={() => setIsOpen(!isOpen)}>{selectedLang}</span>
+                                <span className="text-white underline hover:text-yellow-500"  onClick={() => setIsOpen(!isOpen)}>{selectedLang}</span>
                                 {isOpen && (
                                 <div className="absolute right-10 top-full w-40 bg-black text-white shadow-lg">
                                     {languages.map((lang, index) => (
@@ -183,7 +183,7 @@ const Header = () => {
                             />
 
                             <div className="flex flex-row md:flex-wrap i-center justify-end w-full md:w-auto items-center text-center md:text-right">
-                                <p className="text-medium w-1/2 md:w-full items-left">{`${dayShort}, ${monthName} ${date}, ${year}`}</p>
+                                <p className="text-medium w-1/2 md:w-full">{`${dayShort}, ${monthName} ${date}, ${year}`}</p>
                                 <p className="text-medium w-1/2 md:w-full">Ramadan 1, 1446 AH</p>
 
                             </div>
