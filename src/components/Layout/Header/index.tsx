@@ -268,7 +268,7 @@ const Header = () => {
                                                 </button>
                                                 <button
                                                     onClick={handleAppleSignIn}
-                                                    className="w-1/2 sm:w-full py-2 px-4 bg-black flex items-center justify-center text-white hover:bg-gray-800"
+                                                    className="w-1/2 sm:w-full py-2 px-4 bg-green-500 flex items-center justify-center text-white hover:bg-green-600"
                                                 >
                                                     <FaApple className="text-2xl mr-2" /> {/* Apple Icon */}
                                                 </button>
