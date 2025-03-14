@@ -163,10 +163,10 @@ const Services = () => {
                             {/* Small Images Stack (for Mobile Mode) */}
                             <div className="flex flex-col items-center space-y-4 md:hidden">
                                 {[
-                                    { src: "md-1.svg", waveColor: "pink" },
-                                    { src: "md-2.svg", waveColor: "blue" },
-                                    { src: "md-3.svg", waveColor: "yellow" },
-                                    { src: "md-4.svg", waveColor: "green" },
+                                    { src: "md-1.svg", waveColor: "yellow" },
+                                    { src: "md-2.svg", waveColor: "green" },
+                                    { src: "md-3.svg", waveColor: "blue" },
+                                    { src: "md-4.svg", waveColor: "pink" },
                                 ].map((img, idx) => (
                                     <div key={idx} className="w-36 h-36 max-w-[80%] transform scale-y-[-1] relative">
                                         {/* Wave container */}

@@ -37,7 +37,17 @@ const Hero = () => {
         <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
             {/* Full-Screen Image Wrapper */}
             <div className="relative w-full h-full">
-                {/* Desktop Image */}
+            {isMobile && (
+                    <Image
+                        src="/assets/AboutUs/m_AboutUs.svg" // Your mobile-specific image path
+                        alt="About Us"
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center" // Center the image on mobile
+                        priority
+                        className="block"
+                    />
+                )}
                 {!isMobile && (
                     <Image
                         src="/assets/AboutUs/AboutUs.svg" // Your desktop image path
@@ -51,20 +61,6 @@ const Hero = () => {
 
 
                 )}
-
-                {/* Mobile Image */}
-                {isMobile && (
-                    <Image
-                        src="/assets/AboutUs/m_AboutUs.svg" // Your mobile-specific image path
-                        alt="About Us"
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="center" // Center the image on mobile
-                        priority
-                        className="block"
-                    />
-                )}
-
                 <div className="relative grid grid-rows-12">
                     {!isMobile ?
                         <div className="row-span-4 grid grid-cols-6 bg-gradient-to-b from-black to-transparent"
