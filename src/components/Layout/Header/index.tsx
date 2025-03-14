@@ -7,13 +7,13 @@ const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isSignInOpen, setIsSignInOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const handleGoogleSignIn = () => {
-        signIn("google");
-    };
+    // const handleGoogleSignIn = () => {
+    //     signIn("google");
+    // };
 
-    const handleAppleSignIn = () => {
-        signIn("apple");
-    };
+    // const handleAppleSignIn = () => {
+    //     signIn("apple");
+    // };
 
     const handleEmailSignUp = () => {
         // Your email sign-up logic
