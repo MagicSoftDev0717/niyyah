@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const AI_Net = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -15,6 +15,66 @@ const AI_Net = () => {
 
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+    //////////////////////////
+    const [position, setPosition] = useState(50); // Starts in the center
+    const [dragging, setDragging] = useState(false);
+    const buttonRef = useRef<HTMLDivElement>(null);
+    // Start dragging
+    const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+        setDragging(true);
+        e.preventDefault();
+    };
+
+    // Stop dragging
+    const handleMouseUp = () => {
+        setDragging(false);
+    };
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (!dragging || !buttonRef.current) return;
+
+        const parent = buttonRef.current.parentElement;
+        if (!parent) return;
+
+        const parentRect = parent.getBoundingClientRect();
+        const newX = ((e.clientX - parentRect.left) / parentRect.width) * 100;
+
+        // Ensure the button stays within 0% to 100% range
+        if (newX >= 0 && newX <= 100) {
+            setPosition(newX);
+        }
+    };
+
+    // Function to start dragging (Mouse & Touch)
+    const startDragging = (e: React.MouseEvent | React.TouchEvent) => {
+        setDragging(true);
+        e.preventDefault();
+    };
+
+    // Function to stop dragging (Mouse & Touch)
+    const stopDragging = () => {
+        setDragging(false);
+    };
+
+    // Function to move button (Mouse & Touch)
+    const moveButton = (e: React.MouseEvent | React.TouchEvent) => {
+        if (!dragging || !buttonRef.current) return;
+
+        const parent = buttonRef.current.parentElement;
+        if (!parent) return;
+
+        const parentRect = parent.getBoundingClientRect();
+        let clientX = (e as React.MouseEvent).clientX || (e as React.TouchEvent).touches[0].clientX;
+
+        const newX = ((clientX - parentRect.left) / parentRect.width) * 100;
+
+        // Ensure the button stays within bounds (0% to 100%)
+        if (newX >= 0 && newX <= 100) {
+            setPosition(newX);
+        }
+    };
+
+
+
 
     return (
         <section className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#001427]">
@@ -143,22 +203,30 @@ const AI_Net = () => {
                 {!isMobile ?
 
                     <div className="row-span-2 items-center justify-center text-white w-full max-w-[90%]">
-                        <div className="grid grid-cols-9">
-                            <div className="col-span-2"></div>
+                        <div className="grid grid-cols-10">
+                            <div className="col-span-3"></div>
                             <div className="col-span-5">
                                 <div className="flex flex-col w-full h-1 bg-white mb-8">
                                 </div>
                             </div>
                             <div className="col-span-2"></div>
                         </div>
-                        <span className="text-3xl text-center leading-tight flex flex-col justify-center mb-8">
-                            Get Clarity, Take Action, and Grow!
-                        </span>
-                        <span className="text-lg text-center leading-tight flex flex-col items-center justify-center mb-16">
-                            Every great entrepreneur faces challenges — but you don’t have to figure it out alone. Answer these<br />
-                            quick questions, and we’ll help you with a personalized plan to overcome obstacles and unlock new<br />
-                            opportunities.
-                        </span>
+                        <div className="grid grid-cols-10">
+                            <div className="col-span-3"></div>
+                            <div className="col-span-5">
+                                <span className="text-3xl text-center leading-tight flex flex-col justify-center mb-8">
+                                    Get Clarity, Take Action, and Grow!
+                                </span>
+                                <span className="text-lg text-center leading-tight flex flex-col items-center justify-center mb-16">
+                                    Every great entrepreneur faces challenges — but you don’t have to figure it out alone. Answer these<br />
+                                    quick questions, and we’ll help you with a personalized plan to overcome obstacles and unlock new<br />
+                                    opportunities.
+                                </span>
+                            </div>
+                            <div className="col-span-2"></div>
+                        </div>
+
+
                     </div>
                     :
                     <div className="row-span-2 items-center justify-center text-white w-full px-6 ">
@@ -181,46 +249,250 @@ const AI_Net = () => {
                     </div>}
 
                 {!isMobile ?
-                    <div className="row-span-3 items-center justify-center text-white">
-                        <span className="text-1xl text-center leading-tight flex flex-col justify-center mb-4">
+                    <div className="row-span-3 flex flex-col items-center justify-center text-white">
+                        <span className="text-2xl text-center leading-tight justify-center mb-4">
                             5 Quick Questions.
                         </span>
-                        <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
+
+                        <span className="text-lg text-center leading-tight mb-1">
                             Are you trying to understand the true reason why you want to start a business?
                         </span>
+                        <div className="flex items-center justify-center w-full mb-3">
+                            <span className="text-white text-sm mr-2">Yes</span>
+
+                            <div
+                                className="relative w-24 h-6 bg-transparent border border-yellow-500 rounded-full flex items-center select-none"
+                                onMouseMove={handleMouseMove}
+                                onMouseUp={handleMouseUp}
+                                onMouseLeave={handleMouseUp}
+                            >
+                                <div
+                                    ref={buttonRef}
+                                    className="absolute w-6 h-6 bg-yellow-500 rounded-full cursor-pointer"
+                                    style={{ left: `calc(${position}% - 12px)` }} // Adjust button centering
+                                    onMouseDown={handleMouseDown}
+                                ></div>
+                            </div>
+
+                            <span className="text-white text-sm ml-2">No</span>
+                        </div>
                         <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
                             Are you struggling to implement your marketing strategy?
                         </span>
+                        <div className="flex items-center justify-center w-full mb-3">
+                            <span className="text-white text-sm mr-2">Yes</span>
+
+                            <div
+                                className="relative w-24 h-6 bg-transparent border border-yellow-500 rounded-full flex items-center select-none"
+                                onMouseMove={handleMouseMove}
+                                onMouseUp={handleMouseUp}
+                                onMouseLeave={handleMouseUp}
+                            >
+                                <div
+                                    ref={buttonRef}
+                                    className="absolute w-6 h-6 bg-yellow-500 rounded-full cursor-pointer"
+                                    style={{ left: `calc(${position}% - 12px)` }} // Adjust button centering
+                                    onMouseDown={handleMouseDown}
+                                ></div>
+                            </div>
+
+                            <span className="text-white text-sm ml-2">No</span>
+                        </div>
                         <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
                             Are you finding it difficult to choose a franchise?
                         </span>
+                        <div className="flex items-center justify-center w-full mb-3">
+                            <span className="text-white text-sm mr-2">Yes</span>
+
+                            <div
+                                className="relative w-24 h-6 bg-transparent border border-yellow-500 rounded-full flex items-center select-none"
+                                onMouseMove={handleMouseMove}
+                                onMouseUp={handleMouseUp}
+                                onMouseLeave={handleMouseUp}
+                            >
+                                <div
+                                    ref={buttonRef}
+                                    className="absolute w-6 h-6 bg-yellow-500 rounded-full cursor-pointer"
+                                    style={{ left: `calc(${position}% - 12px)` }} // Adjust button centering
+                                    onMouseDown={handleMouseDown}
+                                ></div>
+                            </div>
+
+                            <span className="text-white text-sm ml-2">No</span>
+                        </div>
                         <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
                             Do you get confused how to maximise AI in your business?
                         </span>
+                        <div className="flex items-center justify-center w-full mb-3">
+                            <span className="text-white text-sm mr-2">Yes</span>
+
+                            <div
+                                className="relative w-24 h-6 bg-transparent border border-yellow-500 rounded-full flex items-center select-none"
+                                onMouseMove={handleMouseMove}
+                                onMouseUp={handleMouseUp}
+                                onMouseLeave={handleMouseUp}
+                            >
+                                <div
+                                    ref={buttonRef}
+                                    className="absolute w-6 h-6 bg-yellow-500 rounded-full cursor-pointer"
+                                    style={{ left: `calc(${position}% - 12px)` }} // Adjust button centering
+                                    onMouseDown={handleMouseDown}
+                                ></div>
+                            </div>
+
+                            <span className="text-white text-sm ml-2">No</span>
+                        </div>
                         <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
                             Did you know Augmented Reality (AR) is the next big thing?
                         </span>
+                        <div className="flex items-center justify-center w-full mb-3">
+                            <span className="text-white text-sm mr-2">Yes</span>
+
+                            <div
+                                className="relative w-24 h-6 bg-transparent border border-yellow-500 rounded-full flex items-center select-none"
+                                onMouseMove={handleMouseMove}
+                                onMouseUp={handleMouseUp}
+                                onMouseLeave={handleMouseUp}
+                            >
+                                <div
+                                    ref={buttonRef}
+                                    className="absolute w-6 h-6 bg-yellow-500 rounded-full cursor-pointer"
+                                    style={{ left: `calc(${position}% - 12px)` }} // Adjust button centering
+                                    onMouseDown={handleMouseDown}
+                                ></div>
+                            </div>
+
+                            <span className="text-white text-sm ml-2">No</span>
+                        </div>
                     </div>
                     :
                     <div className="row-span-3 items-center justify-center text-white flex flex-col px-6">
                         <span className="text-xl text-center leading-tight mb-4">
                             5 Quick Questions.
                         </span>
-                        <span className="text-medium text-center leading-tight mb-1">
+                        <span className="text-medium text-center leading-tight mb-3">
                             Are you trying to understand the true reason why you want to start a business?
                         </span>
-                        <span className="text-medium text-center leading-tight mb-1">
+
+                        {/* Draggable Yes/No Button */}
+                        <div className="flex items-center justify-between w-32 mb-3">
+                            {/* "Yes" (Left Side) */}
+                            <span className="text-white text-sm">Yes</span>
+
+                            {/* Slider Track */}
+                            <div
+                                className="relative w-16 h-6 bg-transparent border border-yellow-500 rounded-full flex items-center px-2 select-none"
+                                onMouseMove={moveButton}
+                                onMouseUp={stopDragging}
+                                onMouseLeave={stopDragging}
+                                onTouchMove={moveButton}
+                                onTouchEnd={stopDragging}
+                            >
+                                {/* Draggable Button */}
+                                <div
+                                    ref={buttonRef}
+                                    className="absolute w-6 h-6 bg-yellow-500 rounded-full cursor-pointer"
+                                    style={{ left: `calc(${position}% - 20px)` }} // Adjust to center
+                                    onMouseDown={startDragging}
+                                    onTouchStart={startDragging}
+                                ></div>
+                            </div>
+
+                            {/* "No" (Right Side) */}
+                            <span className="text-white text-sm">No</span>
+                        </div>
+
+                        <span className="text-medium text-center leading-tight mb-3">
                             Are you struggling to implement your marketing strategy?
                         </span>
-                        <span className="text-medium text-center leading-tight mb-1">
+                        <div className="flex items-center justify-between w-32 mb-3">
+                            {/* "Yes" (Left Side) */}
+                            <span className="text-white text-sm">Yes</span>
+
+                            {/* Slider Track */}
+                            <div
+                                className="relative w-16 h-6 bg-transparent border border-yellow-500 rounded-full flex items-center px-2 select-none"
+                                onMouseMove={moveButton}
+                                onMouseUp={stopDragging}
+                                onMouseLeave={stopDragging}
+                                onTouchMove={moveButton}
+                                onTouchEnd={stopDragging}
+                            >
+                                {/* Draggable Button */}
+                                <div
+                                    ref={buttonRef}
+                                    className="absolute w-6 h-6 bg-yellow-500 rounded-full cursor-pointer"
+                                    style={{ left: `calc(${position}% - 20px)` }} // Adjust to center
+                                    onMouseDown={startDragging}
+                                    onTouchStart={startDragging}
+                                ></div>
+                            </div>
+
+                            {/* "No" (Right Side) */}
+                            <span className="text-white text-sm">No</span>
+                        </div>
+                        <span className="text-medium text-center leading-tight mb-3">
                             Are you finding it difficult to choose a franchise?
                         </span>
-                        <span className="text-medium text-center leading-tight mb-1">
+                        <div className="flex items-center justify-between w-32 mb-3">
+                            {/* "Yes" (Left Side) */}
+                            <span className="text-white text-sm">Yes</span>
+
+                            {/* Slider Track */}
+                            <div
+                                className="relative w-16 h-6 bg-transparent border border-yellow-500 rounded-full flex items-center px-2 select-none"
+                                onMouseMove={moveButton}
+                                onMouseUp={stopDragging}
+                                onMouseLeave={stopDragging}
+                                onTouchMove={moveButton}
+                                onTouchEnd={stopDragging}
+                            >
+                                {/* Draggable Button */}
+                                <div
+                                    ref={buttonRef}
+                                    className="absolute w-6 h-6 bg-yellow-500 rounded-full cursor-pointer"
+                                    style={{ left: `calc(${position}% - 20px)` }} // Adjust to center
+                                    onMouseDown={startDragging}
+                                    onTouchStart={startDragging}
+                                ></div>
+                            </div>
+
+                            {/* "No" (Right Side) */}
+                            <span className="text-white text-sm">No</span>
+                        </div>
+                        <span className="text-medium text-center leading-tight mb-3">
                             Do you get confused how to maximise AI in your business?
                         </span>
+                        <div className="flex items-center justify-between w-32 mb-3">
+                            {/* "Yes" (Left Side) */}
+                            <span className="text-white text-sm">Yes</span>
+
+                            {/* Slider Track */}
+                            <div
+                                className="relative w-16 h-6 bg-transparent border border-yellow-500 rounded-full flex items-center px-2 select-none"
+                                onMouseMove={moveButton}
+                                onMouseUp={stopDragging}
+                                onMouseLeave={stopDragging}
+                                onTouchMove={moveButton}
+                                onTouchEnd={stopDragging}
+                            >
+                                {/* Draggable Button */}
+                                <div
+                                    ref={buttonRef}
+                                    className="absolute w-6 h-6 bg-yellow-500 rounded-full cursor-pointer"
+                                    style={{ left: `calc(${position}% - 20px)` }} // Adjust to center
+                                    onMouseDown={startDragging}
+                                    onTouchStart={startDragging}
+                                ></div>
+                            </div>
+
+                            {/* "No" (Right Side) */}
+                            <span className="text-white text-sm">No</span>
+                        </div>
                         <span className="text-medium text-center leading-tight mb-1">
                             Did you know Augmented Reality (AR) is the next big thing?
                         </span>
+
                     </div>
                 }
                 {!isMobile ?
@@ -254,7 +526,7 @@ const AI_Net = () => {
                         </div>
 
                         <div className="col-span-1 flex flex-row justify-center items-center gap-6">
-                            <button className="p-2 bg-yellow-600 text-black font-bold hover:bg-white transition-all w-48">
+                            <button className="p-2 bg-yellow-500 text-black font-bold hover:bg-white transition-all w-48">
                                 Submit
                             </button>
                         </div>
@@ -290,14 +562,14 @@ const AI_Net = () => {
                     </div>
                 }
                 {!isMobile && (
-                <div className="grid grid-cols-9">
-                    <div className="col-span-1"></div>
-                    <div className="col-span-7">
-                        <div className="flex flex-col w-full h-1 bg-white mb-8">
+                    <div className="grid grid-cols-9">
+                        <div className="col-span-1"></div>
+                        <div className="col-span-7">
+                            <div className="flex flex-col w-full h-1 bg-white mb-8">
+                            </div>
                         </div>
+                        <div className="col-span-1"></div>
                     </div>
-                    <div className="col-span-1"></div>
-                </div>
                 )}
             </div >
         </section >
