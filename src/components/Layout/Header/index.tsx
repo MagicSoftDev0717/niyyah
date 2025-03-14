@@ -156,7 +156,9 @@ const Header = () => {
                                         </div>
                                     )}
                                     <button className="border text-lg border-white px-6 py-2 cursor-pointer" onClick={() => setIsSignInOpen(!isSignInOpen)}>JOIN FREE</button>
-                                    {isSignInOpen && (
+                                  
+                                </div>
+                                {isSignInOpen && (
                                         <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
                                             <div className="relative bg-gray-600 opacity-90 p-6 w-96">
                                                 <button
@@ -214,12 +216,9 @@ const Header = () => {
                                                         Send
                                                     </button>
                                                 </div>
-
-
                                             </div>
                                         </div>
                                     )}
-                                </div>
 
                             </div>
 
@@ -259,7 +258,6 @@ const Header = () => {
                                     </div>
                                 )}
                                 <button className="text-sm border border-white px-1 py-2" onClick={() => setIsSignInOpen(!isSignInOpen)}>JOIN FREE</button>
-
                             </div>
                             {isSignInOpen && (
                                 <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
