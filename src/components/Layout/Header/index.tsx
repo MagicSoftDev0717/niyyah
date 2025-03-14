@@ -89,8 +89,6 @@ const Header = () => {
                                 />
                             </div>
 
-
-
                         </div>
 
                         {/* Row 2: Date, Other Elements */}
@@ -133,9 +131,9 @@ const Header = () => {
                         </div>
                     </div>
                     :
-                    <div className={`flex ${isMobile ? "flex-col" : "flex-row"} justify-between items-center gap-4`}>
+                    <div className={`flex ${isMobile ? "flex-col" : "flex-row"} justify-between items-center gap-2`}>
                         {/* Row 1: Logo, Language, Join Free */}
-                        <div className="flex justify-between w-full md:w-auto gap-6">
+                        <div className="flex justify-between w-full md:w-auto">
 
                             <div className="flex items-center">
                                 <Image src="/assets/Logo/Logo_Niyyah.svg" alt="Logo" width={160} height={80} />
@@ -171,7 +169,7 @@ const Header = () => {
                         </div>
 
                         {/* Row 2: Date, Other Elements */}
-                        <div className="flex justify-between w-full md:w-auto space-x-8">
+                        <div className="flex justify-between w-full md:w-auto space-x-0">
                             <Image
                                 src={imageSrc}
                                 alt="icon"
@@ -182,9 +180,9 @@ const Header = () => {
                             // onClick={() => setIsModalOpen(true)} // Open modal on click
                             />
 
-                            <div className="flex flex-row md:flex-wrap i-center justify-end w-full md:w-auto items-center gap-2 text-center md:text-right">
-                                <p className="text-sm w-1/2 md:w-full items-left">{`${dayShort}, ${monthName} ${date}, ${year}`}</p>
-                                <p className="text-sm w-1/2 md:w-full">Ramadan 1, 1446 AH</p>
+                            <div className="flex flex-row md:flex-wrap i-center justify-end w-full md:w-auto items-center text-center md:text-right">
+                                <p className="text-medium w-1/2 md:w-full items-left">{`${dayShort}, ${monthName} ${date}, ${year}`}</p>
+                                <p className="text-medium w-1/2 md:w-full">Ramadan 1, 1446 AH</p>
 
                             </div>
                         </div>
