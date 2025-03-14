@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
+import { FaTimes } from 'react-icons/fa'; // Importing Google and Apple icons
 const defaultImages = [
     "AR-1.svg",
     "AR-2.svg",
@@ -41,7 +42,13 @@ const popupImages = [
 
 const AI_Net = () => {
     const [isMobile, setIsMobile] = useState(false);
+    const [isSignInOpen, setIsSignInOpen] = useState(false);
 
+
+    const handleEmailSignUp = () => {
+        // Your email sign-up logic
+        console.log("Proceed to email sign-up");
+    };
     // Detect screen size and update isMobile state
     useEffect(() => {
         const handleResize = () => {
@@ -115,19 +122,63 @@ const AI_Net = () => {
                                     <img
                                         src={`/assets/AR/${imgSrc}`}
                                         alt={`Image ${idx + 1}`}
-                                        className="w-48 h-auto object-contain"
+                                        className="w-48 h-auto object-contain cursor-pointer"
                                         onMouseEnter={() => handleMouseEnter(idx)}
                                         onMouseLeave={() => handleMouseLeave(idx)}
                                         onClick={() => handleImageClick(idx)} />
                                 </div>
                             ))}
-                            <button
+                            <button onClick={() => setIsSignInOpen(!isSignInOpen)}
                                 className="px-8 md:px-8 py-3 md:py-1 bg-purple-600 text-white font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
                                 style={{
                                     fontSize: "clamp(1rem, 2vw, 1.5rem)", // Adjusts button text size dynamically
                                 }}
                             >Join Waiting
                             </button>
+                            {isSignInOpen && (
+                                <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
+
+                                    < div className="relative bg-gray-600 opacity-90 p-6 w-96">
+                                        <button
+                                            onClick={() => setIsSignInOpen(false)}
+                                            className="absolute top-2 right-2 text-2xl text-white hover:text-gray-700"
+                                        >
+                                            <FaTimes />
+                                        </button>
+
+                                        <h2 className="text-2xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
+
+                                        {/* Form for Name, Email, and Password */}
+                                        <div className="flex flex-col gap-4 mb-6">
+                                            <input
+                                                type="text"
+                                                placeholder="Full Name*"
+                                                className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
+                                            />
+                                            <input
+                                                type="email"
+                                                placeholder="Email*"
+                                                className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
+                                            />
+                                            <input
+                                                type="password"
+                                                placeholder="Password*"
+                                                className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
+                                            />
+                                        </div>
+
+                                        {/* Submit Button */}
+                                        <div className="flex items-center justify-center">
+                                            <button
+                                                onClick={handleEmailSignUp}
+                                                className="w-1/2 py-2 px-4 bg-purple-600 text-white hover:bg-purple-500"
+                                            >
+                                                Send
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                         {/* <div className="row-span-1">
 
@@ -135,12 +186,16 @@ const AI_Net = () => {
 
                         <div className="row-span-1"></div>
                         {popupImg && (
-                            <div className="fixed inset-0 flex items-bottom justify-center bg-black bg-opacity-60 z-50" onClick={handleClosePopup} >
-                                <img
-                                    src={`/assets/AR/${popupImg}`}
-                                    alt="Popup"
-                                    className="w-1/2 h-auto object-cover"
-                                />
+                            <div className="fixed inset-0 bg-transparent flex items-center justify-center z-50 px-4" onClick={handleClosePopup}>
+
+                                <div className="relative w-full max-w-sm mx-auto">
+
+                                    <img
+                                        src={`/assets/AR/${popupImg}`}
+                                        alt="Full Image"
+                                        className="w-full md:w-auto max-h-[90vh] object-contain"
+                                    />
+                                </div>
                             </div>
                         )}
                     </div>
@@ -188,13 +243,12 @@ const AI_Net = () => {
                         </div>
 
                         <div className="relative row-span-1 grid grid-cols-3 mb-2">
-
                             {arImgs.map((imgSrc, idx) => (
                                 <div key={idx} className="flex items-center justify-left gap-2 mb-2 mx-auto px-4 md:px-12">
                                     <img
                                         src={`/assets/AR/${imgSrc}`}
                                         alt={`Image ${idx + 1}`}
-                                        className="w-48 h-auto object-contain"
+                                        className="w-48 h-auto object-contain cursor-pointer"
                                         onMouseEnter={() => handleMouseEnter(idx)}
                                         onMouseLeave={() => handleMouseLeave(idx)}
                                         onClick={() => handleImageClick(idx)} />
@@ -202,33 +256,104 @@ const AI_Net = () => {
                             ))}
                         </div>
                         <div className="relative row-span-1 flex flex-col items-center justify-center mb-2">
-                            <button
+                            <button onClick={() => setIsSignInOpen(!isSignInOpen)}
                                 className="px-8 md:px-8 py-3 md:py-1 bg-purple-600 text-white font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
                                 style={{
                                     fontSize: "clamp(1rem, 2vw, 1.5rem)", // Adjusts button text size dynamically
                                 }}
                             >Join Waiting
                             </button>
+                            {isSignInOpen && (
+                                <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
+
+                                    <div className="relative bg-gray-600 opacity-90 p-10 sm:px-4 w-88 sm:w-full mx-auto">
+                                        {/* Close button */}
+                                        <button
+                                            onClick={() => setIsSignInOpen(false)}
+                                            className="absolute top-2 right-2 text-2xl text-white hover:text-gray-700"
+                                        >
+                                            <FaTimes />
+                                        </button>
+
+                                        {/* Header */}
+                                        <h2 className="text-xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
+
+                                        {/* Form for Name, Email, and Password */}
+                                        <div className="flex flex-col gap-4 mb-6">
+                                            <input
+                                                type="text"
+                                                placeholder="Full Name*"
+                                                className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
+                                            />
+                                            <input
+                                                type="email"
+                                                placeholder="Email*"
+                                                className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
+                                            />
+                                            <input
+                                                type="password"
+                                                placeholder="Password*"
+                                                className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
+                                            />
+                                        </div>
+
+                                        {/* Submit Button */}
+                                        <div className="flex items-center justify-center">
+                                            <button
+                                                onClick={handleEmailSignUp}
+                                                className="w-1/2 sm:w-full py-2 px-4 bg-purple-600 text-white hover:bg-purple-500"
+                                            >
+                                                Send
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            )}
                         </div>
 
 
-                        {/* <div className="row-span-1">
-
-                    </div> */}
+                        {/* <div className="row-span-1"></div> */}
 
                         <div className="row-span-1"></div>
-                        {popupImg && (
-                            <div className="fixed inset-0 flex items-bottom justify-center bg-black bg-opacity-60 z-50" onClick={handleClosePopup} >
+                        {/* {popupImg && (
+                            <div className="fixed inset-0 flex items-bottom justify-center bg-black bg-opacity-60 z-50"  >
                                 <img
                                     src={`/assets/AR/${popupImg}`}
                                     alt="Popup"
                                     className="w-1/2 h-auto object-cover"
                                 />
                             </div>
+                        )} */}
+                        {popupImg && (
+
+                            <div className="fixed inset-0 bg-transparent flex items-center justify-center z-50 px-4" onClick={handleClosePopup}>
+                                {!isMobile ?
+                                    <div className="relative w-full max-w-sm mx-auto">
+
+                                        <img
+                                            src={`/assets/AR/${popupImg}`}
+                                            alt="Full Image"
+                                            className="w-full md:w-auto max-h-[90vh] object-contain"
+                                        />
+                                    </div>
+                                    :
+                                    <div className="relative w-full max-w-sm mx-auto">
+                                        {/* Display Full-Width Image */}
+                                        <img
+                                            src={`/assets/AR/${popupImg}`}
+                                            alt="Zoomed Image"
+                                            className="w-full h-auto object-contain"
+                                        />
+                                    </div>
+                                }
+
+                            </div>
                         )}
+
                     </div>
                 </div>}
-        </section>
+        </section >
     );
 };
 
