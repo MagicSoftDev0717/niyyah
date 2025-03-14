@@ -56,10 +56,11 @@ const Clock = () => {
             total: diff,
             days: Math.floor(diff / (1000 * 60 * 60 * 24)),
             hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-            minutes: Math.floor((diff / (1000 * 60)) % 60),
-            seconds: Math.floor((diff / 1000) % 60),
+            minutes: String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0'),
+            seconds: String(Math.floor((diff / 1000) % 60)).padStart(2, '0'),
         };
     }
+
 
 
     return (
