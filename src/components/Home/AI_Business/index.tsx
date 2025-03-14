@@ -95,20 +95,20 @@ const AI_Busi = () => {
 
                     <div className="flex flex-col items-center gap-2">
                         <img src="/assets/AI_business/Niyyah_Ai.svg" alt="Image 1" />
-                        <span className="text-lg text-white" >Ali AI</span>
-                        <span className="text-sm" >Spiritual Coach</span>
+                        <span className="text-2xl text-white" >Ali AI</span>
+                        <span className="text-lg" >Spiritual Coach</span>
                     </div>
 
                     <div className="flex flex-col items-center gap-2">
                         <img src="/assets/AI_business/Group 32.svg" alt="Image 4" />
-                        <span className="text-lg text-white">Amina AI</span>
-                        <span className="text-sm" >Marriage Coach</span>
+                        <span className="text-2xl text-white">Amina AI</span>
+                        <span className="text-lg" >Marriage Coach</span>
                     </div>
 
                     <div className="flex flex-col items-center gap-2">
                         <img src="/assets/AI_business/Group 31.svg" alt="Image 7" />
-                        <span className="text-lg text-white">Bilal AI</span>
-                        <span className="text-sm" >Fitness Coach</span>
+                        <span className="text-2xl text-white">Bilal AI</span>
+                        <span className="text-lg" >Fitness Coach</span>
                     </div>
 
                     <div></div>
