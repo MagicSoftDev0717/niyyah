@@ -111,7 +111,7 @@ const AI_Net = () => {
                         <div className="relative row-span-2 grid grid-cols-3 grid-rows-3 mb-2">
 
                             {arImgs.map((imgSrc, idx) => (
-                                <div key={idx} className="flex items-center justify-left gap-4 mb-6">
+                                <div key={idx} className="flex items-center justify-left gap-4 mb-6 cursor-pointer">
                                     <img
                                         src={`/assets/AR/${imgSrc}`}
                                         alt={`Image ${idx + 1}`}
@@ -187,7 +187,7 @@ const AI_Net = () => {
                             </span>
                         </div>
 
-                        <div className="relative row-span-2 grid grid-cols-3 mb-2">
+                        <div className="relative row-span-1 grid grid-cols-3 mb-2">
 
                             {arImgs.map((imgSrc, idx) => (
                                 <div key={idx} className="flex items-center justify-left gap-2 mb-2 mx-auto px-4 md:px-12">
@@ -200,6 +200,8 @@ const AI_Net = () => {
                                         onClick={() => handleImageClick(idx)} />
                                 </div>
                             ))}
+                        </div>
+                        <div className="relative row-span-1 flex flex-col items-center justify-center mb-2">
                             <button
                                 className="px-8 md:px-8 py-3 md:py-1 bg-purple-600 text-white font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
                                 style={{
@@ -208,6 +210,8 @@ const AI_Net = () => {
                             >Join Waiting
                             </button>
                         </div>
+
+
                         {/* <div className="row-span-1">
 
                     </div> */}

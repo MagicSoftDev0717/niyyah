@@ -77,7 +77,7 @@ const Clock = () => {
                 </div>
 
                 <div className={` ${isMobile ? "row-span-1" : "row-span-2"} flex flex-col justify-center items-center`}>
-                    <div className={`grid grid-cols-4 gap-6 transform ${isFlipped ? "rotate-180" : ""}`}>
+                    <div className={`grid grid-cols-4 ${isMobile ? "" : "gap-6"} transform ${isFlipped ? "rotate-180" : ""}`}>
                         {[
                             { label: "days", value: timeLeft.days, img: "clock1.svg" },
                             { label: "hours", value: timeLeft.hours, img: "clock2.svg" },
@@ -102,7 +102,7 @@ const Clock = () => {
 
 
 
-                <div className={` ${isMobile ? "row-span-1"  : "row-span-2"} lex-col justify-center items-center p-4`}>
+                <div className={` ${isMobile ? "row-span-1" : "row-span-2"} lex-col justify-center items-center p-4`}>
                     <div className="text-lg font-sm text-white mb-12">
                         {isMobile ?
                             <span className="text-lg text-center leading-tight flex flex-col items-center justify-center">
@@ -119,16 +119,27 @@ const Clock = () => {
                         }
 
                     </div>
- 
-                    <div className="flex text-white items-center justify-center">
-                        <button
-                            className="px-8 md:px-6 py-1 md:py-3 bg-purple-600 font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
-                            style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
-                            Join the Journey
-                        </button>
-                    </div>
+                    {!isMobile ?
+                        <div className="flex text-white items-center justify-center">
+                            <button
+                                className="px-8 md:px-6 py-1 md:py-3 bg-purple-600 font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
+                                style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
+                                Join the Journey
+                            </button>
+                        </div>
+                        :
+                        <div className="flex text-white items-center justify-center">
+                            <button
+                                className="px-8 md:px-6 py-1 md:py-3 bg-purple-600 font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
+                                style={{ fontSize: "clamp(1rem, 5vw, 1.5rem)" }}>
+                                Join the Journey
+                            </button>
+                        </div>
+
+                    }
+
                 </div>
-                
+
                 <div className="row-span-2 bg-gradient-to-b from-black via-transparent to-transparent md:block hidden" style={{
                     background: "linear-gradient(180deg,  #000833 0%, rgba(0, 8, 51, 0) 100%)",
                     transform: "matrix(1, 0, 0, -1, 0, 0)"
