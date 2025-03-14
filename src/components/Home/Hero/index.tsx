@@ -74,7 +74,7 @@ const Hero = () => {
 
                     {/* CTA Button */}
                     <button
-                        className="mt-6 px-8 md:px-12 py-3 md:py-3 text-white bg-purple-600 font-bold border border-transparent hover:border-white transition-all duration-300"
+                        className="mt-6 px-8 md:px-12 py-3 md:py-3 text-white bg-purple-600 font-bold border border-transparent hover:bg-purple-500 transition-all duration-300"
                         style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
                         Let&apos;s Start
                     </button>
