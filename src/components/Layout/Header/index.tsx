@@ -104,10 +104,10 @@ const Header = () => {
                                     <Image
                                         src="/assets/Header/Default_Lang.svg"
                                         alt="Language"
-                                        width={24}
-                                        height={24}
+                                        width={32}
+                                        height={32}
                                     />
-                                    <span className="text-white hover:text-yellow-500 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>{selectedLang}</span>
+                                    <span className="text-white underline hover:text-yellow-500 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>{selectedLang}</span>
                                     {isOpen && (
                                         <div className="absolute top-full w-40 bg-black text-white shadow-lg">
                                             {languages.map((lang, index) => (
@@ -132,25 +132,23 @@ const Header = () => {
                         </div>
                     </div>
                     :
-                    <div className={`flex ${isMobile ? "flex-col" : "flex-row"} justify-between items-center gap-2`}>
+                    <div className={`flex ${isMobile ? "flex-col" : "flex-row"} justify-between items-center gap-1`}>
                         {/* Row 1: Logo, Language, Join Free */}
-                        <div className="flex justify-between w-full md:w-auto">
+                        <div className="flex justify-between w-full md:w-auto gap-2">
 
                             <div className="flex items-center">
                                 <Image src="/assets/Logo/Logo_Niyyah.svg" alt="Logo" width={160} height={80} />
                             </div>
 
-                            <div className="relative flex items-center space-x-4" onClick={() => setIsOpen(!isOpen)}>
+                            <div className="relative flex items-center space-x-2">
                                 <Image
                                     src="/assets/Header/Default_Lang.svg"
                                     alt="Language"
-                                    width={24}
-                                    height={24}
+                                    width={32}
+                                    height={32}
                                 />
-                                <span className="text-white hover:text-yellow-500">{selectedLang}</span>
-                                <button className="border border-white px-4 py-1">Join Free</button>
-                            </div>
-                            {isOpen && (
+                                <span className="text-white  underline hover:text-yellow-500"  onClick={() => setIsOpen(!isOpen)}>{selectedLang}</span>
+                                {isOpen && (
                                 <div className="absolute right-10 top-full w-40 bg-black text-white shadow-lg">
                                     {languages.map((lang, index) => (
                                         <div
@@ -166,6 +164,9 @@ const Header = () => {
                                     ))}
                                 </div>
                             )}
+                                <button className="border border-white px-4 py-1">JOIN FREE</button>
+                            </div>
+                            
 
                         </div>
 
