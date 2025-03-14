@@ -36,7 +36,7 @@ const Hero = () => {
             <div className="relative w-full h-full">
                 {!isMobile && (
                     <Image
-                        src="/assets/Hero/Photo222.svg"
+                        src="/assets/Hero/HeroScreen.svg"
                         alt="Hero Image"
                         layout="fill"
                         objectFit="cover"
@@ -49,7 +49,7 @@ const Hero = () => {
                 {isMobile && (
                     <Image
                         src="/assets/Hero/m_HeroScreen.svg" // Your mobile-specific image path
-                        alt="About Us"
+                        alt="Hero"
                         layout="fill"
                         objectFit="cover"
                         objectPosition="center" // Center the image on mobile
