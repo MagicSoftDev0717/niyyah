@@ -91,20 +91,20 @@ const AI_Busi = () => {
                     style={{ color: '#A18FF7' }}>
 
                     <div></div>
-                    <div className="flex flex-col items-center gap-2">
-                        <img src="/assets/AI_business/1.svg" alt="Ali AI" className="w-363 h-full" />
+                    <div className="flex flex-col items-center">
+                        <img src="/assets/AI_business/1.svg" alt="Ali AI" className="w-363 h-full mb-4" />
                         <span className="text-2xl text-white leading-tight">Ali AI</span>
                         <span className="text-lg leading-tight">Spiritual Coach</span>
                     </div>
 
-                    <div className="flex flex-col items-center gap-2">
-                        <img src="/assets/AI_business/Group 32.svg" alt="Amina AI" className="w-363 h-full" />
+                    <div className="flex flex-col items-center">
+                        <img src="/assets/AI_business/Group 32.svg" alt="Amina AI" className="w-363 h-full mb-4" />
                         <span className="text-2xl text-white leading-tight">Amina AI</span>
                         <span className="text-lg leading-tight" >Marriage Coach</span>
                     </div>
 
-                    <div className="flex flex-col items-center gap-2">
-                        <img src="/assets/AI_business/Group 31.svg" alt="Bilal AI" className="w-363 h-full" />
+                    <div className="flex flex-col items-center">
+                        <img src="/assets/AI_business/Group 31.svg" alt="Bilal AI" className="w-363 h-full mb-4" />
                         <span className="text-2xl text-white leading-tight">Bilal AI</span>
                         <span className="text-lg leading-tight">Fitness Coach</span>
                     </div>
