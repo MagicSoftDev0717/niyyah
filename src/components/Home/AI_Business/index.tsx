@@ -99,13 +99,13 @@ const AI_Busi = () => {
                     </div>
 
                     <div className="flex flex-col items-center gap-2">
-                        <img src="/assets/AI_business/Group 32.svg" alt="Image 4"  className="w-363 h-full" />
+                        <img src="/assets/AI_business/Group 32.svg" alt="Image 4" className="w-363 h-full" />
                         <span className="text-2xl text-white">Amina AI</span>
                         <span className="text-lg" >Marriage Coach</span>
                     </div>
 
                     <div className="flex flex-col items-center gap-2">
-                        <img src="/assets/AI_business/Group 31.svg" alt="Image 7"  className="w-363 h-full" />
+                        <img src="/assets/AI_business/Group 31.svg" alt="Image 7" className="w-363 h-full" />
                         <span className="text-2xl text-white">Bilal AI</span>
                         <span className="text-lg" >Fitness Coach</span>
                     </div>
