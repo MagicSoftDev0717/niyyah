@@ -48,7 +48,7 @@ const Hero = () => {
 
                 {isMobile && (
                     <Image
-                        src="/assets/Hero/m_hero.svg" // Your mobile-specific image path
+                        src="/assets/Hero/m_HeroScreen.svg" // Your mobile-specific image path
                         alt="About Us"
                         layout="fill"
                         objectFit="cover"
