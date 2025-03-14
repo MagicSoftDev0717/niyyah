@@ -93,7 +93,7 @@ const AI_Busi = () => {
                             </div>
                         )}
                         <span className="text-lg text-left leading-tight flex flex-col justify-center mt-10" style={{ lineHeight: '1.5' }}>
-                            Niyyah means an intention in one's heart to perform an action for the sake of Allah.<br />
+                            Niyyah means an intention in one&apos;s heart to perform an action for the sake of Allah.<br />
                             Niyyah Check is a self-assessment and personalised experience designed to help  <br />
                             you reflect on your business intentions, motivations, and mindset.
                         </span>

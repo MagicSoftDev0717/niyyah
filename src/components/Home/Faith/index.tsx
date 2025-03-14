@@ -161,7 +161,7 @@ const AI_Net = () => {
                     </span>
                 </div>
                 :
-                <div className="row-span-2 items-center justify-center text-white ">
+                <div className="row-span-2 items-center justify-center text-white w-full px-6 ">
                     <div className="grid grid-cols-9">
                         <div className="col-span-2"></div>
                         <div className="col-span-5">
@@ -170,7 +170,7 @@ const AI_Net = () => {
                         </div>
                         <div className="col-span-2"></div>
                     </div>
-                    <span className="text-2xl text-center leading-tight flex flex-col justify-center mb-8">
+                    <span className="text-2xl text-center leading-tight flex flex-col justify-center mb-8 ">
                         Get Clarity, Take Action, and Grow!
                     </span>
                     <span className="text-lg text-center leading-tight flex flex-col items-center justify-center mb-16">
