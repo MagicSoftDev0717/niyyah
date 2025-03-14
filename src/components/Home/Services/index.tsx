@@ -107,7 +107,7 @@ const Services = () => {
                                         className="w-16 h-16 flex-shrink-0"
                                     />
                                     
-                                    <span className="text-3xl md:text-5xl font-bold text-left leading-tight inline-block">
+                                    <span className="text-3xl md:text-5xl font-bold text-center leading-tight inline-block">
                                         Solutions For You
                                     </span>
                                 </div>
