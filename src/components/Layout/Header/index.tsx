@@ -256,7 +256,7 @@ const Header = () => {
                                             </button>
 
                                             {/* Header */}
-                                            <h2 className="text-2xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
+                                            <h2 className="text-xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
 
                                             {/* Google and Apple Sign Up in one row */}
                                             <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
