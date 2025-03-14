@@ -93,35 +93,29 @@ const Services = () => {
                     </div>
                     :
                     <div
-                        className="relative row-span-2 grid grid-cols-6 bg-gradient-to-b from-black to-transparent">
+                        className="relative row-span-2 grid grid-cols-10 bg-gradient-to-b from-black to-transparent">
 
                         <div className="col-span-1"></div>
 
-                        <div className="col-span-4">
+                        <div className="col-span-8">
                             <div className="row-span-1 text-white mb-4">
                                 <div className="flex flex-row items-center gap-x-4 mb-8">
-                                    {/* Vision Icon */}
+                                    
                                     <img
                                         src="/assets/AboutUs/NE.svg"
                                         alt="Vision Icon"
                                         className="w-16 h-16 flex-shrink-0"
                                     />
-
-                                    {/* Solutions Text */}
-                                    <span className="text-4xl md:text-5xl font-bold text-left leading-tight">
-                                        <span className="inline-block">Solutions</span>
-                                        <span className="block md:inline"> For You</span> {/* 'For You' on the next line in mobile */}
+                                    
+                                    <span className="text-2xl md:text-5xl font-bold text-left leading-tight inline-block">
+                                        Solutions For You
                                     </span>
                                 </div>
-
-
-
-
                                 {/* Updated Span for Mobile Two-Line Display */}
                                 <span
-                                    className="text-2xl md:text-3xl text-center md:text-left leading-tight flex flex-col justify-center w-full md:w-auto max-w-xs mx-auto"
+                                    className="text-xl md:text-3xl text-center md:text-left leading-tight flex flex-col justify-center w-full md:w-auto max-w-xs mx-auto"
                                 >
-                                    Niyyah for Success.<br className="block md:hidden" /> Achieve Business Excellence
+                                    Niyyah for Success.<br /> Achieve Business Excellence
                                 </span>
                             </div>
                         </div>
