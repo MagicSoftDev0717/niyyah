@@ -63,7 +63,7 @@ const AI_Net = () => {
         if (!parent) return;
 
         const parentRect = parent.getBoundingClientRect();
-        let clientX = (e as React.MouseEvent).clientX || (e as React.TouchEvent).touches[0].clientX;
+        const clientX = (e as React.MouseEvent).clientX || (e as React.TouchEvent).touches[0].clientX;
 
         const newX = ((clientX - parentRect.left) / parentRect.width) * 100;
 
