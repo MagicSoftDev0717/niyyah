@@ -6,7 +6,7 @@ import { FaGoogle, FaApple, FaTimes } from 'react-icons/fa'; // Importing Google
 const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isSignInOpen, setIsSignInOpen] = useState(false);
-
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const handleGoogleSignIn = () => {
         signIn("google");
     };
@@ -101,9 +101,24 @@ const Header = () => {
                                     height={50}
                                     onMouseEnter={() => setImageSrc("/assets/Header/Property_Variant2.svg")}
                                     onMouseLeave={() => setImageSrc("/assets/Header/Property_Default.svg")}
-                                // onClick={() => setIsModalOpen(true)} // Open modal on click
+                                    onClick={() => setIsModalOpen(true)} // Open modal on click
                                 />
                             </div>
+                            {isModalOpen && (
+                                <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
+                                    <div className="relative bg-gray-600 bg-opacity-90  p-6 shadow-lg w-96">
+                                        <button
+                                            className="absolute top-0 right-0 mr-2 mt-2 dark:invert"
+                                            onClick={() => setIsModalOpen(false)} // Close modal on click
+                                        >
+                                            <FaTimes />
+                                        </button>
+                                        <h2 className="text-xl text-yellow-400 font-bold mb-4 text-center">Intention Starts with Prayer 😊</h2>
+                                        <p className="text-lg text-center text-white">Coming Soon. Watch this space.</p>
+
+                                    </div>
+                                </div>
+                            )}
 
                         </div>
 
@@ -154,22 +169,22 @@ const Header = () => {
                                                 <h2 className="text-2xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
 
                                                 {/* Google and Apple Sign Up in one row */}
-                                                <div className="flex items-center justify-center gap-4 mb-6">
+                                                {/* <div className="flex items-center justify-center gap-4 mb-6">
                                                     <button
                                                         onClick={handleGoogleSignIn}
                                                         className="w-1/3 py-2 px-4 bg-blue-500 flex items-center justify-center text-white hover:bg-blue-600"
                                                     >
-                                                        <FaGoogle className="text-2xl mr-2" /> {/* Google Icon */}
+                                                        <FaGoogle className="text-2xl mr-2" /> 
 
                                                     </button>
                                                     <button
                                                         onClick={handleAppleSignIn}
                                                         className="w-1/3 py-2 px-4 bg-black flex items-center justify-center text-white hover:bg-gray-800"
                                                     >
-                                                        <FaApple className="text-2xl mr-2" /> {/* Apple Icon */}
+                                                        <FaApple className="text-2xl mr-2" /> 
 
                                                     </button>
-                                                </div>
+                                                </div> */}
 
                                                 {/* Form for Name, Email, and Password */}
                                                 <div className="flex flex-col gap-4 mb-6">
@@ -255,24 +270,24 @@ const Header = () => {
                                                 <FaTimes />
                                             </button>
 
-                                            {/* Header */}
+                                           
                                             <h2 className="text-xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
 
-                                            {/* Google and Apple Sign Up in one row */}
-                                            <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
+                                            
+                                            {/* <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
                                                 <button
                                                     onClick={handleGoogleSignIn}
                                                     className="w-1/2 sm:w-full py-2 px-4 bg-blue-500 flex items-center justify-center text-white hover:bg-blue-600"
                                                 >
-                                                    <FaGoogle className="text-2xl mr-2" /> {/* Google Icon */}
+                                                    <FaGoogle className="text-2xl mr-2" /> 
                                                 </button>
                                                 <button
                                                     onClick={handleAppleSignIn}
                                                     className="w-1/2 sm:w-full py-2 px-4 bg-green-500 flex items-center justify-center text-white hover:bg-green-600"
                                                 >
-                                                    <FaApple className="text-2xl mr-2" /> {/* Apple Icon */}
+                                                    <FaApple className="text-2xl mr-2" />
                                                 </button>
-                                            </div>
+                                            </div> */}
 
                                             {/* Form for Name, Email, and Password */}
                                             <div className="flex flex-col gap-4 mb-6">
@@ -321,9 +336,32 @@ const Header = () => {
                                 height={45}
                                 onMouseEnter={() => setImageSrc("/assets/Header/Property_Variant2.svg")}
                                 onMouseLeave={() => setImageSrc("/assets/Header/Property_Default.svg")}
-                            // onClick={() => setIsModalOpen(true)} // Open modal on click
+                                onClick={() => setIsModalOpen(true)} // Open modal on click
                             />
+                            {isModalOpen && (
+                                <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-50 flex items-center justify-center z-50 px-4">
+                                    <div className="relative bg-gray-600 bg-opacity-90 p-6 shadow-lg w-full max-w-sm">
+                                        {/* Close Button (Top Right) */}
+                                        <button
+                                            className="absolute top-2 right-2 text-white hover:text-gray-400"
+                                            onClick={() => setIsModalOpen(false)}
+                                        >
+                                            <FaTimes className="text-2xl" />
+                                        </button>
 
+                                        {/* Heading */}
+                                        <h2 className="text-xl text-yellow-400 font-bold mb-4 text-center">
+                                            Intention Starts with Prayer 😊
+                                        </h2>
+
+                                        {/* Message */}
+                                        <p className="text-lg text-center text-white">
+                                            Coming Soon. Watch this space.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            )}
                             <div className="flex flex-row md:flex-wrap i-center justify-end w-full md:w-auto items-center text-center md:text-right">
                                 <p className="text-medium w-1/2 md:w-full">{`${dayShort}, ${monthName} ${date}, ${year}`}</p>
                                 <p className="text-medium w-1/2 md:w-full">Ramadan 1, 1446 AH</p>

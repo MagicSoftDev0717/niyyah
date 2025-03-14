@@ -151,20 +151,20 @@ const Hero = () => {
                                                                     <h2 className="text-xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
                                     
                                                                     {/* Google and Apple Sign Up in one row */}
-                                                                    <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
+                                                                    {/* <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
                                                                         <button
                                                                             onClick={handleGoogleSignIn}
                                                                             className="w-1/2 sm:w-full py-2 px-4 bg-blue-500 flex items-center justify-center text-white hover:bg-blue-600"
                                                                         >
-                                                                            <FaGoogle className="text-2xl mr-2" /> {/* Google Icon */}
+                                                                            <FaGoogle className="text-2xl mr-2" />
                                                                         </button>
                                                                         <button
                                                                             onClick={handleAppleSignIn}
                                                                             className="w-1/2 sm:w-full py-2 px-4 bg-green-500 flex items-center justify-center text-white hover:bg-green-600"
                                                                         >
-                                                                            <FaApple className="text-2xl mr-2" /> {/* Apple Icon */}
+                                                                            <FaApple className="text-2xl mr-2" />
                                                                         </button>
-                                                                    </div>
+                                                                    </div> */}
                                     
                                                                     {/* Form for Name, Email, and Password */}
                                                                     <div className="flex flex-col gap-4 mb-6">
