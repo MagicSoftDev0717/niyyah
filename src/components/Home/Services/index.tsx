@@ -159,7 +159,7 @@ const Services = () => {
                         }}
                     >
                         {/* Images Container */}
-                        <div className="flex flex-col items-center space-y-4 w-full">
+                        <div className="flex flex-col items-center space-y-6 w-full">
                             {/* Small Images Stack (for Mobile Mode) */}
                             <div className="flex flex-col items-center space-y-4 md:hidden">
                                 {[
@@ -170,7 +170,7 @@ const Services = () => {
                                 ].map((img, idx) => (
                                     <div key={idx} className="w-36 h-36 max-w-[80%] transform scale-y-[-1] relative">
                                         {/* Wave container */}
-                                        <div className="relative w-full h-full">
+                                        <div className={`wave-container`}>
                                             <div className={`wave ${img.waveColor}`} />
                                         </div>
 

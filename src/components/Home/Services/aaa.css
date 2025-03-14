@@ -1,14 +1,14 @@
 @keyframes wave {
     0% {
-      transform: scale(0); /* Starts at 0% */
-      opacity: 0.3; /* Starts faint */
+      transform: scale(0); /* Starts from 0% */
+      opacity: 0.3; /* Faint */
     }
     50% {
-      transform: scale(1.5); /* Expands fully */
+      transform: scale(1.5); /* Expands slightly */
       opacity: 0.5; /* More visible */
     }
     100% {
-      transform: scale(4); /* Expands beyond the image */
+      transform: scale(4); /* Expands further */
       opacity: 0; /* Fades out */
     }
   }
@@ -16,14 +16,14 @@
   /* The wave effect */
   .wave {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%; /* Starts from the size of the image */
-    height: 100%; /* Starts from the size of the image */
+    top: 50%; 
+    left: 50%; 
+    width: 100%; /* Start with the size of the image */
+    height: 100%; /* Keep it square */
     border-radius: 50%; /* Circular shape */
     transform: translate(-50%, -50%); /* Center the wave */
-    animation: wave 2s infinite; /* Infinite animation */
-    pointer-events: none; /* Ensure it doesn't block interaction with the image */
+    animation: wave 2s infinite; /* Infinite wave animation */
+    pointer-events: none; /* Does not block image interaction */
     z-index: -1; /* Keeps it behind the image */
   }
   
@@ -31,12 +31,15 @@
   .pink {
     border: 2px solid pink;
   }
+  
   .blue {
     border: 2px solid blue;
   }
+  
   .yellow {
     border: 2px solid yellow;
   }
+  
   .green {
     border: 2px solid green;
   }
