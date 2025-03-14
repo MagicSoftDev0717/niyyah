@@ -157,6 +157,7 @@ const AI_Busi = () => {
                                 </div>
                             </div>
                         }
+                        
                         {!isMobile ?
                         <div className="flex flex-col items-center gap-4 w-full px-6">
                             <input

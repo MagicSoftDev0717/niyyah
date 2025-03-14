@@ -17,9 +17,9 @@ const Footer = () => {
   
             {/* Column 3: Social Icons */}
             <div className="flex justify-center md:justify-end space-x-4">
-              <a href="#"><img src="/assets/Footer/facebook.svg" alt="Facebook" width={24} height={24} /></a>
-              <a href="#"><img src="/assets/Footer/instagram.svg" alt="instagram" width={24} height={24} /></a>
-              <a href="#"><img src="/assets/Footer/youtube.svg" alt="LinkedIn" width={24} height={24} /></a>
+              <a href="#"><img src="/assets/Footer/facebook.svg" alt="Facebook" width={36} height={36} /></a>
+              <a href="#"><img src="/assets/Footer/instagram.svg" alt="instagram" width={36} height={36} /></a>
+              <a href="#"><img src="/assets/Footer/youtube.svg" alt="LinkedIn" width={36} height={36} /></a>
             </div>
           </div>
           <p className="text-center text-sm mt-6">&copy; 2025 Company Name. All rights reserved.</p>

@@ -140,121 +140,165 @@ const AI_Net = () => {
                         <div className="hidden md:block"></div>
                     </div>
                 }
-                {!isMobile ? 
+                {!isMobile ?
 
-                <div className="row-span-2 items-center justify-center text-white w-full max-w-[90%]">
-                    <div className="grid grid-cols-9">
-                        <div className="col-span-2"></div>
-                        <div className="col-span-5">
-                            <div className="flex flex-col w-full h-1 bg-white mb-8">
+                    <div className="row-span-2 items-center justify-center text-white w-full max-w-[90%]">
+                        <div className="grid grid-cols-9">
+                            <div className="col-span-2"></div>
+                            <div className="col-span-5">
+                                <div className="flex flex-col w-full h-1 bg-white mb-8">
+                                </div>
                             </div>
+                            <div className="col-span-2"></div>
                         </div>
-                        <div className="col-span-2"></div>
+                        <span className="text-3xl text-center leading-tight flex flex-col justify-center mb-8">
+                            Get Clarity, Take Action, and Grow!
+                        </span>
+                        <span className="text-lg text-center leading-tight flex flex-col items-center justify-center mb-16">
+                            Every great entrepreneur faces challenges — but you don’t have to figure it out alone. Answer these<br />
+                            quick questions, and we’ll help you with a personalized plan to overcome obstacles and unlock new<br />
+                            opportunities.
+                        </span>
                     </div>
-                    <span className="text-3xl text-center leading-tight flex flex-col justify-center mb-8">
-                        Get Clarity, Take Action, and Grow!
-                    </span>
-                    <span className="text-lg text-center leading-tight flex flex-col items-center justify-center mb-16">
-                        Every great entrepreneur faces challenges — but you don’t have to figure it out alone. Answer these<br />
-                        quick questions, and we’ll help you with a personalized plan to overcome obstacles and unlock new<br />
-                        opportunities.
-                    </span>
-                </div>
-                :
-                <div className="row-span-2 items-center justify-center text-white w-full px-6 ">
-                    <div className="grid grid-cols-9">
-                        <div className="col-span-2"></div>
-                        <div className="col-span-5">
-                            <div className="flex flex-col w-full h-1 bg-white mb-8">
+                    :
+                    <div className="row-span-2 items-center justify-center text-white w-full px-6 ">
+                        <div className="grid grid-cols-12">
+                            <div className="col-span-1"></div>
+                            <div className="col-span-10">
+                                <div className="flex flex-col w-full h-1 bg-white mb-8">
+                                </div>
                             </div>
+                            <div className="col-span-1"></div>
                         </div>
-                        <div className="col-span-2"></div>
+                        <span className="text-2xl text-center leading-tight flex flex-col justify-center mb-8 ">
+                            Get Clarity, Take Action, and Grow!
+                        </span>
+                        <span className="text-lg text-center leading-tight flex flex-col items-center justify-center mb-16">
+                            Every great entrepreneur faces challenges — but you don’t have to figure it out alone. Answer these
+                            quick questions, and we’ll help you with a personalized plan to overcome obstacles and unlock new
+                            opportunities.
+                        </span>
+                    </div>}
+
+                {!isMobile ?
+                    <div className="row-span-3 items-center justify-center text-white">
+                        <span className="text-1xl text-center leading-tight flex flex-col justify-center mb-4">
+                            5 Quick Questions.
+                        </span>
+                        <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
+                            Are you trying to understand the true reason why you want to start a business?
+                        </span>
+                        <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
+                            Are you struggling to implement your marketing strategy?
+                        </span>
+                        <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
+                            Are you finding it difficult to choose a franchise?
+                        </span>
+                        <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
+                            Do you get confused how to maximise AI in your business?
+                        </span>
+                        <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
+                            Did you know Augmented Reality (AR) is the next big thing?
+                        </span>
                     </div>
-                    <span className="text-2xl text-center leading-tight flex flex-col justify-center mb-8 ">
-                        Get Clarity, Take Action, and Grow!
-                    </span>
-                    <span className="text-lg text-center leading-tight flex flex-col items-center justify-center mb-16">
-                        Every great entrepreneur faces challenges — but you don’t have to figure it out alone. Answer these
-                        quick questions, and we’ll help you with a personalized plan to overcome obstacles and unlock new
-                        opportunities.
-                    </span>
-                </div>}
+                    :
+                    <div className="row-span-3 items-center justify-center text-white flex flex-col px-6">
+                        <span className="text-xl text-center leading-tight mb-4">
+                            5 Quick Questions.
+                        </span>
+                        <span className="text-medium text-center leading-tight mb-1">
+                            Are you trying to understand the true reason why you want to start a business?
+                        </span>
+                        <span className="text-medium text-center leading-tight mb-1">
+                            Are you struggling to implement your marketing strategy?
+                        </span>
+                        <span className="text-medium text-center leading-tight mb-1">
+                            Are you finding it difficult to choose a franchise?
+                        </span>
+                        <span className="text-medium text-center leading-tight mb-1">
+                            Do you get confused how to maximise AI in your business?
+                        </span>
+                        <span className="text-medium text-center leading-tight mb-1">
+                            Did you know Augmented Reality (AR) is the next big thing?
+                        </span>
+                    </div>
+                }
+                {!isMobile ?
+                    <div className="row-span-1 grid grid-cols-6 flex flex-col items-center justify-center">
+                        <div className="col-span-1"></div>
+
+                        <div className="col-span-1 flex flex-row justify-center items-center gap-6">
+                            <input
+                                type="text"
+                                placeholder="Your name*"
+                                className="p-2 bg-transparent border-b-2 text-white placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-purple-500 w-72"
+                            />
+                        </div>
 
 
-                <div className="row-span-3 items-center justify-center text-white">
+                        <div className="col-span-1 flex flex-row justify-center items-center gap-6">
+                            <input
+                                type="email"
+                                placeholder="Your email*"
+                                className="p-2 bg-transparent border-b-2 text-white placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-purple-500 w-72"
+                            />
+                        </div>
 
-                    <span className="text-2xl text-center leading-tight flex flex-col justify-center mb-4">
-                        5 Quick Questions.
-                    </span>
-                    <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
-                        Are you trying to understand the true reason why you want to start a business?
-                    </span>
-                    <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
-                        Are you struggling to implement your marketing strategy?
-                    </span>
-                    <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
-                        Are you finding it difficult to choose a franchise?
-                    </span>
-                    <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
-                        Do you get confused how to maximise AI in your business?
-                    </span>
-                    <span className="text-lg text-center leading-tight flex flex-col justify-center mb-1">
-                        Did you know Augmented Reality (AR) is the next big thing?
-                    </span>
+                        <div className="col-span-1 flex flex-row justify-center items-center gap-6">
+                            <input
+                                type="text"
+                                placeholder="Your phone number*"
+                                className="p-2 bg-transparent border-b-2 text-white placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-purple-500 w-72"
+                            />
 
-                </div>
-                <div className="row-span-1 grid grid-cols-6 flex flex-col items-center justify-center">
-                    <div className="col-span-1"></div>
+                        </div>
 
-                    <div className="col-span-1 flex flex-row justify-center items-center gap-6">
+                        <div className="col-span-1 flex flex-row justify-center items-center gap-6">
+                            <button className="p-2 bg-yellow-600 text-black font-bold hover:bg-white transition-all w-48">
+                                Submit
+                            </button>
+                        </div>
+
+                        <div className="col-span-1"></div>
+                    </div>
+                    :
+
+                    <div className="flex flex-col items-center w-full gap-4 px-4 mb-4">
                         <input
                             type="text"
                             placeholder="Your name*"
-                            className="p-2 bg-transparent border-b-2 text-white placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-purple-500 w-72"
+                            className="p-2 bg-transparent border-b-2 text-white placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-purple-500 w-full max-w-sm"
                         />
-                    </div>
 
-
-                    <div className="col-span-1 flex flex-row justify-center items-center gap-6">
                         <input
                             type="email"
                             placeholder="Your email*"
-                            className="p-2 bg-transparent border-b-2 text-white placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-purple-500 w-72"
+                            className="p-2 bg-transparent border-b-2 text-white placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-purple-500 w-full max-w-sm"
                         />
-                    </div>
 
-                    <div className="col-span-1 flex flex-row justify-center items-center gap-6">
                         <input
                             type="text"
                             placeholder="Your phone number*"
-                            className="p-2 bg-transparent border-b-2 text-white placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-purple-500 w-72"
+                            className="p-2 bg-transparent border-b-2 text-white placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-purple-500 w-full max-w-sm"
                         />
 
-                    </div>
-
-                    <div className="col-span-1 flex flex-row justify-center items-center gap-6">
-                        <button className="p-2 bg-yellow-600 text-black font-bold hover:bg-white transition-all w-48">
+                        <button className="p-2 bg-yellow-500 text-black font-bold hover:bg-white transition-all w-full max-w-sm">
                             Submit
                         </button>
+
+                        <div className="flex flex-col w-full h-1 bg-white mb-8"></div>
                     </div>
-
-                    <div className="col-span-1"></div>
-                </div>
-
+                }
+                {!isMobile && (
                 <div className="grid grid-cols-9">
-                    <div className="col-span-2"></div>
-                    <div className="col-span-5">
+                    <div className="col-span-1"></div>
+                    <div className="col-span-7">
                         <div className="flex flex-col w-full h-1 bg-white mb-8">
                         </div>
                     </div>
-                    <div className="col-span-2"></div>
-
+                    <div className="col-span-1"></div>
                 </div>
-
-
-
-
-
+                )}
             </div >
         </section >
     );
