@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { signIn } from "next-auth/react"; // For Google and Apple authentication if using next-auth
-import { FaGoogle, FaApple, FaTimes } from 'react-icons/fa'; // Importing Google and Apple icons
+// import { signIn } from "next-auth/react"; // For Google and Apple authentication if using next-auth
+import { FaTimes } from 'react-icons/fa'; // Importing Google and Apple icons
 const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isSignInOpen, setIsSignInOpen] = useState(false);

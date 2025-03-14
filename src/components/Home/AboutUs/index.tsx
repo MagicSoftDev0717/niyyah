@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { signIn } from "next-auth/react"; // For Google and Apple authentication if using next-auth
-import { FaGoogle, FaApple, FaTimes } from 'react-icons/fa'; // Importing Google and Apple icons
+import { FaTimes } from 'react-icons/fa'; // Importing Google and Apple icons
 
 const Hero = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -99,9 +99,7 @@ const Hero = () => {
                                         Join the Vision
                                     </button>
                                     {isSignInOpen && (
-
                                         <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
-
                                             <div className="relative bg-gray-600 opacity-90 p-6 w-96">
                                                 <button
                                                     onClick={() => setIsSignInOpen(false)}
@@ -141,7 +139,6 @@ const Hero = () => {
                                                     </button>
                                                 </div>
                                             </div>
-
                                         </div>
                                     )}
                                 </div>
@@ -183,9 +180,7 @@ const Hero = () => {
                                         Join the Vision
                                     </button>
                                     {isSignInOpen && (
-
                                         <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
-
                                             <div className="relative bg-gray-600 opacity-90 p-10 sm:px-4 w-88 sm:w-full mx-auto">
                                                 {/* Close button */}
                                                 <button
@@ -243,7 +238,6 @@ const Hero = () => {
                                                     </button>
                                                 </div>
                                             </div>
-
                                         </div>
                                     )}
                                 </div>
