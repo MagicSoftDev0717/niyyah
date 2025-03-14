@@ -246,7 +246,7 @@ const Header = () => {
                                 <button className="border border-white px-4 py-1" onClick={() => setIsSignInOpen(!isSignInOpen)}>JOIN FREE</button>
                                 {isSignInOpen && (
                                     <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
-                                        <div className="relative bg-gray-600 opacity-90 p-8 sm:px-4 w-90 sm:w-full mx-auto">
+                                        <div className="relative bg-gray-600 opacity-90 p-10 sm:px-4 w-88 sm:w-full mx-auto">
                                             {/* Close button */}
                                             <button
                                                 onClick={() => setIsSignInOpen(false)}
