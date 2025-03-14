@@ -22,7 +22,7 @@ const Footer = () => {
               <a href="#"><img src="/assets/Footer/youtube.svg" alt="LinkedIn" width={36} height={36} /></a>
             </div>
           </div>
-          <p className="text-center text-sm mt-6">&copy; 2025 NIYYAH ENTREPRENRUE. All rights reserved.</p>
+          <p className="text-center text-sm mt-6">&copy; 2025 NIYYAH ENTREPRENEUR. All rights reserved.</p>
         </div>
       </footer>
     );
