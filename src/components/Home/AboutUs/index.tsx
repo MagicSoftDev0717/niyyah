@@ -241,7 +241,6 @@ const Hero = () => {
 
                             <div className="col-span-1"></div>
                         </div>
-
                     }
 
                     {!isMobile ?

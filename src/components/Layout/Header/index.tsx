@@ -82,7 +82,7 @@ const Header = () => {
 
     return (
         <header className="fixed top-0 z-50 w-full bg-gray-900 text-white shadow-lg">
-            <div className="container mx-auto px-4 py-4">
+            <div className="container mx-auto px-2 py-2">
                 {/* Mobile: Two Rows | Desktop: One Row */}
                 {!isMobile ?
                     <div className={`flex ${isMobile ? "flex-col" : "flex-row"} justify-between items-center gap-4`}>
@@ -228,7 +228,7 @@ const Header = () => {
                     :
                     <div className={`flex ${isMobile ? "flex-col" : "flex-row"} justify-between items-center gap-1`}>
                         {/* Row 1: Logo, Language, Join Free */}
-                        <div className="flex justify-between w-full md:w-auto gap-2">
+                        <div className="flex justify-between w-full md:w-auto gap-1">
 
                             <div className="flex items-center">
                                 <Image src="/assets/Logo/Logo_Niyyah.svg" alt="Logo" width={160} height={80} />
@@ -258,7 +258,7 @@ const Header = () => {
                                         ))}
                                     </div>
                                 )}
-                                <button className="border border-white px-4 py-1" onClick={() => setIsSignInOpen(!isSignInOpen)}>JOIN FREE</button>
+                                <button className="text-sm border border-white px-1 py-2" onClick={() => setIsSignInOpen(!isSignInOpen)}>JOIN FREE</button>
                                 {isSignInOpen && (
                                     <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
                                         <div className="relative bg-gray-600 opacity-90 p-10 sm:px-4 w-88 sm:w-full mx-auto">
