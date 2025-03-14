@@ -89,25 +89,24 @@ const AI_Busi = () => {
                 <div className={`relative row-span-4 flex ${isMobile ? "flex-wrap" : "grid grid-cols-5"} 
                     items-center justify-center text-white gap-12 w-full min-h-screen overflow-visible`}
                     style={{ color: '#A18FF7' }}>
+
                     <div></div>
-
-
                     <div className="flex flex-col items-center gap-2">
-                        <img src="/assets/AI_business/1.svg" alt="Image 1" className="w-363 h-full" />
-                        <span className="text-2xl text-white" >Ali AI</span>
-                        <span className="text-lg" >Spiritual Coach</span>
+                        <img src="/assets/AI_business/1.svg" alt="Ali AI" className="w-363 h-full" />
+                        <span className="text-2xl text-white leading-tight">Ali AI</span>
+                        <span className="text-lg leading-tight">Spiritual Coach</span>
                     </div>
 
                     <div className="flex flex-col items-center gap-2">
-                        <img src="/assets/AI_business/Group 32.svg" alt="Image 4" className="w-363 h-full" />
-                        <span className="text-2xl text-white">Amina AI</span>
-                        <span className="text-lg" >Marriage Coach</span>
+                        <img src="/assets/AI_business/Group 32.svg" alt="Amina AI" className="w-363 h-full" />
+                        <span className="text-2xl text-white leading-tight">Amina AI</span>
+                        <span className="text-lg leading-tight" >Marriage Coach</span>
                     </div>
 
                     <div className="flex flex-col items-center gap-2">
-                        <img src="/assets/AI_business/Group 31.svg" alt="Image 7" className="w-363 h-full" />
-                        <span className="text-2xl text-white">Bilal AI</span>
-                        <span className="text-lg" >Fitness Coach</span>
+                        <img src="/assets/AI_business/Group 31.svg" alt="Bilal AI" className="w-363 h-full" />
+                        <span className="text-2xl text-white leading-tight">Bilal AI</span>
+                        <span className="text-lg leading-tight">Fitness Coach</span>
                     </div>
 
                     <div></div>
