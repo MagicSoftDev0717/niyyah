@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-
+import "./aaa.css";
 const Services = () => {
     const [isMobile, setIsMobile] = useState(false);
 
@@ -100,13 +100,13 @@ const Services = () => {
                         <div className="col-span-11">
                             <div className="row-span-1 text-white mb-4">
                                 <div className="flex flex-row items-center gap-x-4 mb-8">
-                                    
+
                                     <img
                                         src="/assets/AboutUs/NE.svg"
                                         alt="Vision Icon"
                                         className="w-16 h-16 flex-shrink-0"
                                     />
-                                    
+
                                     <span className="text-3xl md:text-5xl font-bold text-center leading-tight inline-block">
                                         Solutions For You
                                     </span>
@@ -119,7 +119,7 @@ const Services = () => {
                                 </span>
                             </div>
                         </div>
-                       
+
                     </div>
 
                 }
@@ -149,7 +149,7 @@ const Services = () => {
                                     onMouseLeave={() => handleMouseLeave(idx)} />
                             </div>
                         ))}
-                    </div> 
+                    </div>
                     :
                     <div
                         className="relative row-span-10 bg-gradient-to-b from-black to-transparent flex flex-col items-center justify-center text-white p-6 min-h-screen"
@@ -159,16 +159,22 @@ const Services = () => {
                         }}
                     >
                         {/* Images Container */}
-                        <div className="flex flex-col items-center space-y-6 w-full">
+                        <div className="flex flex-col items-center space-y-4 w-full">
                             {/* Small Images Stack (for Mobile Mode) */}
                             <div className="flex flex-col items-center space-y-4 md:hidden">
                                 {[
-                                    { src: "md-1.svg" },
-                                    { src: "md-2.svg" },
-                                    { src: "md-3.svg" },
-                                    { src: "md-4.svg" },
+                                    { src: "md-1.svg", waveColor: "pink" },
+                                    { src: "md-2.svg", waveColor: "blue" },
+                                    { src: "md-3.svg", waveColor: "yellow" },
+                                    { src: "md-4.svg", waveColor: "green" },
                                 ].map((img, idx) => (
-                                    <div key={idx} className="w-36 h-36 max-w-[80%] transform scale-y-[-1]">
+                                    <div key={idx} className="w-36 h-36 max-w-[80%] transform scale-y-[-1] relative">
+                                        {/* Wave container */}
+                                        <div className="relative w-full h-full">
+                                            <div className={`wave ${img.waveColor}`} />
+                                        </div>
+
+                                        {/* Image */}
                                         <img
                                             src={`/assets/Services/${img.src}`}
                                             alt={`Small ${idx + 1}`}
@@ -179,6 +185,7 @@ const Services = () => {
                                     </div>
                                 ))}
                             </div>
+
 
                             {/* Large Image */}
                             <div className="w-48 h-auto max-w-[90%] md:w-64 transform scale-y-[-1]">
