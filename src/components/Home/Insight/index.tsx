@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 
-const Sights = () => {
+const Inights = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     // Detect screen size and update isMobile state
@@ -90,4 +90,4 @@ const Sights = () => {
     );
 };
 
-export default Sights;
+export default Inights;
