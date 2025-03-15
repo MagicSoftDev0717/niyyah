@@ -68,7 +68,7 @@ const Hero = () => {
                     }}></div>
 
                 {/* Content Section: Positioned at the bottom 1/5 of the screen */}
-                <div className="absolute bottom-1/7 w-full flex flex-col items-center justify-center text-white text-center px-6">
+                <div className="absolute bottom-1/6 w-full flex flex-col items-center justify-center text-white text-center px-6">
                     {/* Responsive Heading */}
                     <h2
                         className="leading-tight font-bold"
@@ -88,8 +88,8 @@ const Hero = () => {
 
 
                     <button onClick={() => setIsSignInOpen(!isSignInOpen)}
-                        className="mt-6 px-8 md:px-12 py-3 md:py-3 text-white bg-purple-600 font-bold border border-transparent hover:bg-purple-500 transition-all duration-300"
-                        style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
+                        className="mt-6 px-8 md:px-12 py-3 md:py-3 bg-purple-600 border border-transparent rounded-lg hover:bg-purple-500 transition-all duration-300 text-white font-bold text-2xl"
+                        >
                         Let&apos;s Start
                     </button>
                     {isSignInOpen && (

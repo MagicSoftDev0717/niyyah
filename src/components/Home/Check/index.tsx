@@ -131,12 +131,12 @@ const AI_Busi = () => {
                             </div>
 
                             :
-                            <div className="grid grid-cols-3 gap-4 mt-8 relative mb-6 text-white text-center">
+                            <div className="relative grid grid-cols-3 mt-4 mb-4 text-white text-center">
                                 {/* Step 1 */}
                                 <div className="flex flex-col items-center">
                                     <div className="text-5xl font-bold">1.</div>
                                     <div className="text-medium">
-                                        Answer Insightful<br />Questions To Uncover<br />Your True Drive.
+                                        Answer Insightful Questions To Uncover Your True Drive.
                                     </div>
                                 </div>
 
@@ -144,7 +144,7 @@ const AI_Busi = () => {
                                 <div className="flex flex-col items-center">
                                     <div className="text-5xl font-bold">2.</div>
                                     <div className="text-medium">
-                                        Use Emotion Tracking<br />To Understand Decision<br />-Making Patterns.
+                                        Use Emotion Tracking To Understand Decision -Making Patterns.
                                     </div>
                                 </div>
 
@@ -152,7 +152,7 @@ const AI_Busi = () => {
                                 <div className="flex flex-col items-center">
                                     <div className="text-5xl font-bold">3.</div>
                                     <div className="text-medium">
-                                        Get Personalised<br />Feedback & Tailored<br />Growth Strategies.
+                                        Get Personalised Feedback & Tailored Growth Strategies.
                                     </div>
                                 </div>
                             </div>

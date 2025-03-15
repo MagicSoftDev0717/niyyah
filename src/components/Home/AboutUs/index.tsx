@@ -90,7 +90,7 @@ const Hero = () => {
                                 </div>
                                 <div className="text-lg font-sm text-white">
                                     <button onClick={() => setIsSignInOpen(!isSignInOpen)}
-                                        className="px-8 md:px-6 py-3 md:py-3 bg-transparent text-white font-bold border border-transparent hover:border-white hover:text-white transition-all duration-300"
+                                        className="px-8 md:px-6 py-3 md:py-3 bg-transparent rounded-lg text-white font-bold border border-transparent hover:border-white hover:text-white transition-all duration-300"
                                         style={{ backgroundColor: "#7C23DD", fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
                                         Join the Vision
                                     </button>
@@ -171,7 +171,7 @@ const Hero = () => {
                                 </div>
                                 <div className="text-lg font-sm text-white">
                                     <button onClick={() => setIsSignInOpen(!isSignInOpen)}
-                                        className="px-8 md:px-6 py-3 md:py-3 bg-transparent text-white font-bold border border-transparent hover:border-white hover:text-white transition-all duration-300"
+                                        className="px-8 md:px-6 py-3 md:py-3 bg-transparent rounded-lg text-white font-bold border border-transparent hover:border-white hover:text-white transition-all duration-300"
                                         style={{ backgroundColor: "#7C23DD", fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
                                         Join the Vision
                                     </button>

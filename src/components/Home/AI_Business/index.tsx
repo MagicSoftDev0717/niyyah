@@ -69,13 +69,13 @@ const AI_Busi = () => {
                         <div className="items-center justify-center">
                             <div className="row-span-1 text-white mb-4">
                                 <div className="flex items-center gap-x-4 mb-12">
-                                    <span className={`${isMobile ? "text-3xl text-left" : "text-5xl text-center"} font-bold leading-tight`}>Meet the AI Team</span>
+                                    <span className={`${isMobile ? "text-3xl text-left" : "text-5xl text-center"} font-bold leading-tight`}>Meet the Team</span>
                                 </div>
                                 <span className={`${isMobile ? "text-xl" : "text-4xl"} text-center leading-tight flex flex-col justify-center mb-12`}>
                                     AI Experts Driven by Sincerity and Passion
                                 </span>
                                 <span className={`${isMobile ? "text-lg" : "text-2xl"} text-center leading-tight flex flex-col justify-center`}>
-                                    Supercharge your business with Intelligent Al Experts and AI Influencers designed to
+                                    Boost your business with Intelligent Al Experts and AI Influencers designed to
                                     help you Start or Grow Your Business Mission.
                                 </span>
                             </div>

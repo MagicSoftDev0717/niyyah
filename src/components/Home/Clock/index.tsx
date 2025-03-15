@@ -68,7 +68,7 @@ const Clock = () => {
             className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#180033]"
         >
             {/* Full-Screen Image Wrapper */}
-            <div className={`relative grid  ${isMobile ? "grid-rows-3" : "grid-rows-8"}  w-full h-full`}>
+            <div className={`relative  ${isMobile ? "h-full" : "grid  grid-rows-8"}  w-full `}>
                 <div className={` ${isMobile ? "row-span-1" : "row-span-2"} gap-6 items-center justify-center text-white`}>
                     <div className="items-center justify-center p-16 ">
                         <div className="font-lg text-white gap-6">
@@ -82,7 +82,7 @@ const Clock = () => {
                     </div>
                 </div>
 
-                <div className={` ${isMobile ? "row-span-1" : "row-span-2"} flex flex-col justify-center items-center`}>
+                <div className={` ${isMobile ? "" : "row-span-2"} flex flex-col justify-center items-center`}>
                     <div className={`grid grid-cols-4 ${isMobile ? "" : "gap-6"} transform ${isFlipped ? "rotate-180" : ""}`}>
                         {[
                             { label: "days", value: timeLeft.days, img: "clock1.svg" },
@@ -108,7 +108,7 @@ const Clock = () => {
 
 
 
-                <div className={` ${isMobile ? "row-span-1" : "row-span-2"} lex-col justify-center items-center p-4`}>
+                <div className={` ${isMobile ? "" : "row-span-2"} lex-col justify-center items-center p-4`}>
                     <div className="text-lg font-sm text-white mb-12">
                         {isMobile ?
                             <span className="text-lg text-center leading-tight flex flex-col items-center justify-center">
@@ -182,7 +182,7 @@ const Clock = () => {
                         :
                         <div className="flex text-white items-center justify-center">
                             <button onClick={() => setIsSignInOpen(!isSignInOpen)}
-                                className="px-8 md:px-6 py-1 md:py-3 bg-purple-600 font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
+                                className="px-8 md:px-6 py-1 md:py-3 bg-purple-600 font-bold rounded-lg hover:bg-white hover:text-purple-700 transition-all duration-300"
                                 style={{ fontSize: "clamp(1rem, 5vw, 1.5rem)" }}>
                                 Join the Journey
                             </button>

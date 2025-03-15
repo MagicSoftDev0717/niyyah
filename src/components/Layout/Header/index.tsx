@@ -81,7 +81,7 @@ const Header = () => {
 
 
     return (
-        <header className="fixed top-0 z-50 w-full bg-gray-900 text-white shadow-lg">
+        <header className="relative top-0 z-50 w-full bg-gray-900 text-white shadow-lg">
             <div className="container mx-auto px-2 py-2">
                 {/* Mobile: Two Rows | Desktop: One Row */}
                 {!isMobile ?
@@ -156,22 +156,22 @@ const Header = () => {
                                         </div>
                                     )}
                                     <button className="border text-lg border-white px-6 py-2 cursor-pointer" onClick={() => setIsSignInOpen(!isSignInOpen)}>JOIN FREE</button>
-                                  
+
                                 </div>
                                 {isSignInOpen && (
-                                        <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
-                                            <div className="relative bg-gray-600 opacity-90 p-6 w-96">
-                                                <button
-                                                    onClick={() => setIsSignInOpen(false)}
-                                                    className="absolute top-2 right-2 text-2xl text-white hover:text-gray-700"
-                                                >
-                                                    <FaTimes />
-                                                </button>
+                                    <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
+                                        <div className="relative bg-gray-600 opacity-90 p-6 w-96">
+                                            <button
+                                                onClick={() => setIsSignInOpen(false)}
+                                                className="absolute top-2 right-2 text-2xl text-white hover:text-gray-700"
+                                            >
+                                                <FaTimes />
+                                            </button>
 
-                                                <h2 className="text-2xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
+                                            <h2 className="text-2xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
 
-                                                {/* Google and Apple Sign Up in one row */}
-                                                {/* <div className="flex items-center justify-center gap-4 mb-6">
+                                            {/* Google and Apple Sign Up in one row */}
+                                            {/* <div className="flex items-center justify-center gap-4 mb-6">
                                                     <button
                                                         onClick={handleGoogleSignIn}
                                                         className="w-1/3 py-2 px-4 bg-blue-500 flex items-center justify-center text-white hover:bg-blue-600"
@@ -188,37 +188,37 @@ const Header = () => {
                                                     </button>
                                                 </div> */}
 
-                                                {/* Form for Name, Email, and Password */}
-                                                <div className="flex flex-col gap-4 mb-6">
-                                                    <input
-                                                        type="text"
-                                                        placeholder="Full Name*"
-                                                        className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
-                                                    />
-                                                    <input
-                                                        type="email"
-                                                        placeholder="Email*"
-                                                        className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
-                                                    />
-                                                    <input
-                                                        type="password"
-                                                        placeholder="Password*"
-                                                        className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
-                                                    />
-                                                </div>
+                                            {/* Form for Name, Email, and Password */}
+                                            <div className="flex flex-col gap-4 mb-6">
+                                                <input
+                                                    type="text"
+                                                    placeholder="Full Name*"
+                                                    className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
+                                                />
+                                                <input
+                                                    type="email"
+                                                    placeholder="Email*"
+                                                    className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
+                                                />
+                                                <input
+                                                    type="password"
+                                                    placeholder="Password*"
+                                                    className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
+                                                />
+                                            </div>
 
-                                                {/* Submit Button */}
-                                                <div className="flex items-center justify-center">
-                                                    <button
-                                                        onClick={handleEmailSignUp}
-                                                        className="w-1/2 py-2 px-4 bg-purple-600 text-white hover:bg-purple-500"
-                                                    >
-                                                        Send
-                                                    </button>
-                                                </div>
+                                            {/* Submit Button */}
+                                            <div className="flex items-center justify-center">
+                                                <button
+                                                    onClick={handleEmailSignUp}
+                                                    className="w-1/2 py-2 px-4 bg-purple-600 text-white hover:bg-purple-500"
+                                                >
+                                                    Send
+                                                </button>
                                             </div>
                                         </div>
-                                    )}
+                                    </div>
+                                )}
 
                             </div>
 
@@ -233,45 +233,84 @@ const Header = () => {
                                 <Image src="/assets/Logo/Logo_Niyyah.svg" alt="Logo" width={160} height={80} />
                             </div>
 
-                            <div className="relative flex items-center space-x-2">
+                            <div className="flex items-center justify-left w-1/4 md:w-auto space-x-0">
+                                <Image
+                                    src={imageSrc}
+                                    alt="icon"
+                                    width={45}
+                                    height={45}
+                                    onMouseEnter={() => setImageSrc("/assets/Header/Property_Variant2.svg")}
+                                    onMouseLeave={() => setImageSrc("/assets/Header/Property_Default.svg")}
+                                    onClick={() => setIsModalOpen(true)} // Open modal on click
+                                />
+                                {isModalOpen && (
+                                    <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-50 flex items-center justify-center z-50 px-4">
+                                        <div className="relative bg-gray-600 bg-opacity-90 p-6 shadow-lg w-full max-w-sm">
+                                            {/* Close Button (Top Right) */}
+                                            <button
+                                                className="absolute top-2 right-2 text-white hover:text-gray-400"
+                                                onClick={() => setIsModalOpen(false)}
+                                            >
+                                                <FaTimes className="text-2xl" />
+                                            </button>
+
+                                            {/* Heading */}
+                                            <h2 className="text-xl text-yellow-400 font-bold mb-4 text-center">
+                                                Intention Starts with Prayer 😊
+                                            </h2>
+
+                                            {/* Message */}
+                                            <p className="text-lg text-center text-white">
+                                                Coming Soon. Watch this space.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                )}
+                            </div>
+
+
+                            <div className="relative flex items-center justify-center space-x-2">
                                 <Image
                                     src="/assets/Header/Default_Lang.svg"
                                     alt="Language"
                                     width={32}
                                     height={32}
                                 />
-                                <span className="text-white underline hover:text-yellow-500" onClick={() => setIsOpen(!isOpen)}>{selectedLang}</span>
-                                {isOpen && (
-                                    <div className="absolute right-10 top-full w-40 bg-gray-900 text-white shadow-lg">
-                                        {languages.map((lang, index) => (
-                                            <div
-                                                key={index}
-                                                className="px-4 py-2 hover:text-black hover:bg-white"
-                                                onClick={() => {
-                                                    setSelectedLang(lang.code);
-                                                    setIsOpen(false);
-                                                }}
-                                            >
-                                                <span className="font-bold"> {lang.code}</span><span>&nbsp;&nbsp;{lang.name} </span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                                <button className="text-sm border border-white px-1 py-2" onClick={() => setIsSignInOpen(!isSignInOpen)}>JOIN FREE</button>
+                                <div className="relative flex items-center justify-between space-x-2">
+                                    <span className="text-white underline hover:text-yellow-500" onClick={() => setIsOpen(!isOpen)}>{selectedLang}</span>
+                                </div>
+                                {/* <button className="text-sm border border-white px-1 py-2" onClick={() => setIsSignInOpen(!isSignInOpen)}>JOIN FREE</button> */}
                             </div>
-                            {isSignInOpen && (
+                            {isOpen && (
+                                <div className="absolute right-0 top-full w-40 bg-gray-900 text-white shadow-lg">
+                                    {languages.map((lang, index) => (
+                                        <div
+                                            key={index}
+                                            className="px-4 py-2 hover:text-black hover:bg-white"
+                                            onClick={() => {
+                                                setSelectedLang(lang.code);
+                                                setIsOpen(false);
+                                            }}
+                                        >
+                                            <span className="font-bold"> {lang.code}</span><span>&nbsp;&nbsp;{lang.name} </span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                            {/* {isSignInOpen && (
                                 <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
                                     <div className="relative bg-gray-600 opacity-90 p-10 sm:px-4 w-88 sm:w-full mx-auto">
                                         {/* Close button */}
-                                        <button
+                            {/* <button
                                             onClick={() => setIsSignInOpen(false)}
                                             className="absolute top-2 right-2 text-2xl text-white hover:text-gray-700"
                                         >
                                             <FaTimes />
                                         </button>
-                                        <h2 className="text-xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
+                                        <h2 className="text-xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2> */}
 
-                                        {/* <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
+                            {/* <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
                                                 <button
                                                     onClick={handleGoogleSignIn}
                                                     className="w-1/2 sm:w-full py-2 px-4 bg-blue-500 flex items-center justify-center text-white hover:bg-blue-600"
@@ -286,8 +325,8 @@ const Header = () => {
                                                 </button>
                                             </div> */}
 
-                                        {/* Form for Name, Email, and Password */}
-                                        <div className="flex flex-col gap-4 mb-6">
+                            {/* Form for Name, Email, and Password */}
+                            {/* <div className="flex flex-col gap-4 mb-6">
                                             <input
                                                 type="text"
                                                 placeholder="Full Name*"
@@ -303,10 +342,10 @@ const Header = () => {
                                                 placeholder="Password*"
                                                 className="p-2 bg-transparent border-b-2 text-white placeholder-white focus:outline-none focus:ring-0 focus:border-purple-500"
                                             />
-                                        </div>
+                                        </div> */}
 
-                                        {/* Submit Button */}
-                                        <div className="flex items-center justify-center">
+                            {/* Submit Button */}
+                            {/* <div className="flex items-center justify-center">
                                             <button
                                                 onClick={handleEmailSignUp}
                                                 className="w-1/2 sm:w-full py-2 px-4 bg-purple-600 text-white hover:bg-purple-500"
@@ -316,11 +355,11 @@ const Header = () => {
                                         </div>
                                     </div>
                                 </div>
-                            )}
+                            )} */}
                         </div>
 
                         {/* Row 2: Date, Other Elements */}
-                        <div className="flex justify-between w-full md:w-auto space-x-0">
+                        {/* <div className="flex justify-between w-full md:w-auto space-x-0">
                             <Image
                                 src={imageSrc}
                                 alt="icon"
@@ -328,12 +367,12 @@ const Header = () => {
                                 height={45}
                                 onMouseEnter={() => setImageSrc("/assets/Header/Property_Variant2.svg")}
                                 onMouseLeave={() => setImageSrc("/assets/Header/Property_Default.svg")}
-                                onClick={() => setIsModalOpen(true)} // Open modal on click
+                                onClick={() => setIsModalOpen(true)} 
                             />
                             {isModalOpen && (
                                 <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-50 flex items-center justify-center z-50 px-4">
                                     <div className="relative bg-gray-600 bg-opacity-90 p-6 shadow-lg w-full max-w-sm">
-                                        {/* Close Button (Top Right) */}
+                                       
                                         <button
                                             className="absolute top-2 right-2 text-white hover:text-gray-400"
                                             onClick={() => setIsModalOpen(false)}
@@ -341,25 +380,25 @@ const Header = () => {
                                             <FaTimes className="text-2xl" />
                                         </button>
 
-                                        {/* Heading */}
+                                        
                                         <h2 className="text-xl text-yellow-400 font-bold mb-4 text-center">
                                             Intention Starts with Prayer 😊
                                         </h2>
 
-                                        {/* Message */}
+                                       
                                         <p className="text-lg text-center text-white">
                                             Coming Soon. Watch this space.
                                         </p>
                                     </div>
                                 </div>
 
-                            )}
-                            <div className="flex flex-row md:flex-wrap i-center justify-end w-full md:w-auto items-center text-center md:text-right">
+                            )} */}
+                        {/* <div className="flex flex-row md:flex-wrap i-center justify-end w-full md:w-auto items-center text-center md:text-right">
                                 <p className="text-medium w-1/2 md:w-full">{`${dayShort}, ${monthName} ${date}, ${year}`}</p>
                                 <p className="text-medium w-1/2 md:w-full">Ramadan 1, 1446 AH</p>
 
-                            </div>
-                        </div>
+                            </div> */}
+                        {/* </div> */}
                     </div>}
 
             </div>
