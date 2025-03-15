@@ -94,34 +94,30 @@ const Services = () => {
                     :
                     <div
                         className="relative row-span-2 grid grid-cols-12 bg-gradient-to-b from-black to-transparent">
-
                         <div className="col-span-1"></div>
-
-                        <div className="col-span-11">
+                        <div className="col-span-10">
                             <div className="row-span-1 text-white mb-4">
-                                <div className="flex flex-row items-center gap-x-4 mb-8">
-
+                                <div className="flex flex-row items-center gap-x-2 mb-8">
                                     <img
                                         src="/assets/AboutUs/NE.svg"
                                         alt="Vision Icon"
                                         className="w-16 h-16 flex-shrink-0"
                                     />
 
-                                    <span className="text-3xl md:text-5xl font-bold text-center leading-tight inline-block">
+                                    <span className="text-3xl md:text-5xl font-bold text-left leading-tight inline-block">
                                         Solutions For You
                                     </span>
                                 </div>
                                 {/* Updated Span for Mobile Two-Line Display */}
                                 <span
-                                    className="text-xl md:text-3xl text-center md:text-center leading-tight flex flex-col justify-center w-full md:w-auto max-w-xs mx-auto"
+                                    className="text-2xl md:text-3xl text-center md:text-center leading-tight flex flex-col justify-center w-full md:w-auto max-w-xs mx-auto"
                                 >
                                     Niyyah for Success.<br /> Achieve Business Excellence
                                 </span>
                             </div>
                         </div>
-
+                        <div className="col-span-1"></div>
                     </div>
-
                 }
 
                 {!isMobile ?
@@ -152,7 +148,7 @@ const Services = () => {
                     </div>
                     :
                     <div
-                        className="relative row-span-10 bg-gradient-to-b from-black to-transparent flex flex-col items-center justify-center text-white p-6 min-h-screen"
+                        className="relative row-span-10 bg-gradient-to-b from-black to-transparent flex flex-col items-center justify-center text-white min-h-screen"
                         style={{
                             background: "linear-gradient(180deg,  #180033 0%, rgba(24, 0, 51, 0) 100%)",
                             transform: "matrix(1, 0, 0, -1, 0, 0)"
