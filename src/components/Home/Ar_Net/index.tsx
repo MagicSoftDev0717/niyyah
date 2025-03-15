@@ -264,7 +264,7 @@ const AI_Net = () => {
                                 style={{
                                     fontSize: "clamp(1rem, 2vw, 1.5rem)", // Adjusts button text size dynamically
                                 }}
-                            >Join Waiting
+                            >Join Waiting List
                             </button>
                             {isSignInOpen && (
                                 <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
