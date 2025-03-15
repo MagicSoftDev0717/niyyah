@@ -136,13 +136,16 @@ const AI_Busi = () => {
                         </div>
                     </div>
                 }
-                <div className="relative row-span-2 gap-3 flex flex-col items-top justify-center text-white"
+
+                <div className="absolute bottom-0 w-full h-1/3 "
                     style={{
                         background: "linear-gradient(180deg, #000833 0%, rgba(0, 8, 51, 0) 100%)",
                         transform: "matrix(1, 0, 0, -1, 0, 0)"
                     }}>
-                    <div className="flex flex-col items-center justify-center transform scale-y-[-1]">
-
+                </div>
+                <div className="relative row-span-2 gap-3 flex flex-col items-top justify-center text-white"
+                >
+                    <div className="relative flex flex-col items-center justify-center">
                         <span className={`${isMobile ? "text-lg" : "text-2xl"} text-center leading-tight flex flex-col items-center justify-center mb-4 font-bold`}>
                             Ready to Start or Scale your Business?
                         </span>
@@ -155,6 +158,7 @@ const AI_Busi = () => {
                             style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
                             Join Now
                         </button>
+
                         {isSignInOpen && (
                             <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
                                 {!isMobile ?
@@ -168,7 +172,6 @@ const AI_Busi = () => {
 
                                         <h2 className="text-2xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
 
-                                        {/* Form for Name, Email, and Password */}
                                         <div className="flex flex-col gap-4 mb-6">
                                             <input
                                                 type="text"

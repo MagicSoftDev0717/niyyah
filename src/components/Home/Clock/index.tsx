@@ -67,6 +67,12 @@ const Clock = () => {
         <section
             className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#180033]"
         >
+            <div className="absolute bottom-0 w-full h-1/6 "
+                style={{
+                    background: "linear-gradient(180deg, #000833 0%, rgba(0, 8, 51, 0) 100%)",
+                    transform: "matrix(1, 0, 0, -1, 0, 0)"
+                }}>
+            </div>
             {/* Full-Screen Image Wrapper */}
             <div className={`relative  ${isMobile ? "h-full" : "grid  grid-rows-8"}  w-full `}>
                 <div className={` ${isMobile ? "row-span-1" : "row-span-2"} gap-6 items-center justify-center text-white`}>
@@ -123,6 +129,8 @@ const Clock = () => {
                         }
 
                     </div>
+
+
                     {!isMobile ?
                         <div className="flex text-white items-center justify-center">
                             <button onClick={() => setIsSignInOpen(!isSignInOpen)}
@@ -131,9 +139,7 @@ const Clock = () => {
                                 Join the Journey
                             </button>
                             {isSignInOpen && (
-
                                 <div className="fixed top-0 left-0 w-full h-full bg-transparent bg-opacity-20 flex items-center justify-center z-50">
-
                                     <div className="relative bg-gray-600 opacity-90 p-6 w-96">
                                         <button
                                             onClick={() => setIsSignInOpen(false)}
@@ -173,7 +179,6 @@ const Clock = () => {
                                             </button>
                                         </div>
                                     </div>
-
                                 </div>
                             )}
                         </div>

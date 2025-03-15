@@ -61,6 +61,12 @@ const Hero = () => {
 
 
                 )}
+                <div className="absolute bottom-0 w-full h-1/6 "
+                    style={{
+                        background: "linear-gradient(180deg, #180033 0%, rgba(24, 0, 51, 0) 100%)",
+                        transform: "matrix(1, 0, 0, -1, 0, 0)"
+                    }}>
+                </div>
                 <div className="relative grid grid-rows-12">
                     {!isMobile ?
                         <div className="row-span-4 grid grid-cols-6 bg-gradient-to-b from-black to-transparent"
