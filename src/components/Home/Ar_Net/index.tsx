@@ -229,8 +229,7 @@ const AI_Net = () => {
 
                         </div>
 
-                        <div className="row-span-4 flex flex-col items-start justify-between gap-4 w-full relative"
-                        >
+                        <div className="row-span-4 flex flex-col items-start justify-between gap-4 w-full relative mb-4">
                             <div className="relative w-full">
                                 <img
                                     src="/assets/AR/AR-human.svg"
@@ -248,7 +247,7 @@ const AI_Net = () => {
                             </span>
                         </div>
 
-                        <div className="relative row-span-1 grid grid-cols-3 mb-2">
+                        <div className="relative row-span-1 grid grid-cols-3">
                             {arImgs.map((imgSrc, idx) => (
                                 <div key={idx} className="flex items-center justify-left gap-2 mb-2 mx-auto px-4 md:px-12">
                                     <img
