@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import {FaTimes } from 'react-icons/fa'; // Importing Google and Apple icons
+import { FaTimes } from 'react-icons/fa'; // Importing Google and Apple icons
 const AI_Busi = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isSignInOpen, setIsSignInOpen] = useState(false);
@@ -65,13 +65,16 @@ const AI_Busi = () => {
                     <div className="col-span-1">
 
                     </div>
-                    <div className={`  ${isMobile ? "col-span-8" : "col-span-5"}`}>
+                    <div className={`${isMobile ? "col-span-8" : "col-span-5"}`}>
                         <div className="items-center justify-center">
                             <div className="row-span-1 text-white mb-4">
-                                <div className="flex items-center gap-x-4 mb-12">
+                                <div className="flex items-center gap-x-4 mb-6">
+                                    <span className={`${isMobile ? "text-3xl text-left" : "text-5xl text-center"} font-bold leading-tight`}></span>
+                                </div>
+                                <div className="flex items-center gap-x-4 mb-10">
                                     <span className={`${isMobile ? "text-3xl text-left" : "text-5xl text-center"} font-bold leading-tight`}>Meet the Team</span>
                                 </div>
-                                <span className={`${isMobile ? "text-xl" : "text-4xl"} text-center leading-tight flex flex-col justify-center mb-12`}>
+                                <span className={`${isMobile ? "text-xl" : "text-4xl"} text-center leading-tight flex flex-col justify-center mb-10`}>
                                     AI Experts Driven by Sincerity and Passion
                                 </span>
                                 <span className={`${isMobile ? "text-lg" : "text-2xl"} text-center leading-tight flex flex-col justify-center`}>
@@ -86,7 +89,54 @@ const AI_Busi = () => {
                     </div>
                 </div>
 
-                <div className={`relative row-span-4 flex ${isMobile ? "flex-wrap" : "grid grid-cols-5"} 
+                {!isMobile ?
+                    <div className="relative row-span-4 grid grid-cols-5 items-center justify-center text-white gap-12 w-full min-h-screen overflow-visible"
+                        style={{ color: '#A18FF7' }}>
+
+                        <div></div>
+                        <div className="flex flex-col items-center">
+                            <img src="/assets/AI_business/1.svg" alt="Ali AI" className="w-363 h-full mb-4" />
+                            <span className="text-2xl text-white leading-tight">Ali AI</span>
+                            <span className="text-lg leading-tight">Spiritual Coach</span>
+                        </div>
+
+                        <div className="flex flex-col items-center">
+                            <img src="/assets/AI_business/Group 32.svg" alt="Amina AI" className="w-363 h-full mb-4" />
+                            <span className="text-2xl text-white leading-tight">Amina AI</span>
+                            <span className="text-lg leading-tight" >Marriage Coach</span>
+                        </div>
+
+                        <div className="flex flex-col items-center">
+                            <img src="/assets/AI_business/Group 31.svg" alt="Bilal AI" className="w-363 h-full mb-4" />
+                            <span className="text-2xl text-white leading-tight">Bilal AI</span>
+                            <span className="text-lg leading-tight">Fitness Coach</span>
+                        </div>
+
+                        <div></div>
+                    </div>
+                    :
+                    <div className="relative row-span-4 flex flex-row items-center justify-center text-white gap-4 w-full h-auto overflow-visible"
+                        style={{ color: '#A18FF7' }}>
+                        <div className="flex flex-col items-center">
+                            <img src="/assets/AI_business/1.svg" alt="Ali AI" className="w-auto h-auto mb-4" />
+                            <span className="text-xl text-white leading-tight">Ali AI</span>
+                            <span className="text-sm leading-tight">Spiritual Coach</span>
+                        </div>
+
+                        <div className="flex flex-col items-center">
+                            <img src="/assets/AI_business/Group 32.svg" alt="Amina AI" className="w-auto h-auto mb-4" />
+                            <span className="text-xl text-white leading-tight">Amina AI</span>
+                            <span className="text-sm leading-tight" >Marriage Coach</span>
+                        </div>
+
+                        <div className="flex flex-col items-center">
+                            <img src="/assets/AI_business/Group 31.svg" alt="Bilal AI" className="w-auto h-auto mb-4" />
+                            <span className="text-xl text-white leading-tight">Bilal AI</span>
+                            <span className="text-sm leading-tight">Fitness Coach</span>
+                        </div>
+                    </div>
+                }
+                {/* <div className={`relative row-span-4 flex ${isMobile ? "grid grid-cols-3" : "grid grid-cols-5"} 
                     items-center justify-center text-white gap-12 w-full min-h-screen overflow-visible`}
                     style={{ color: '#A18FF7' }}>
 
@@ -110,7 +160,7 @@ const AI_Busi = () => {
                     </div>
 
                     <div></div>
-                </div>
+                </div> */}
                 <div className="relative row-span-2 gap-3 flex flex-col items-top justify-center text-white"
                     style={{
                         background: "linear-gradient(180deg, #000833 0%, rgba(0, 8, 51, 0) 100%)",
@@ -126,7 +176,7 @@ const AI_Busi = () => {
                         </span>
 
                         <button onClick={() => setIsSignInOpen(!isSignInOpen)}
-                            className="px-8 md:px-12 py-2 md:py-2 bg-purple-600 text-white font-bold hover:bg-white hover:text-purple-700 transition-all duration-300"
+                            className="px-8 md:px-12 py-2 md:py-2 bg-purple-600 text-white font-bold rounded-lg hover:bg-white hover:text-purple-700 transition-all duration-300"
                             style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
                             Join Now
                         </button>
