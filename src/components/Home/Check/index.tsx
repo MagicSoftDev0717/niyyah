@@ -74,7 +74,8 @@ const AI_Busi = () => {
 
                 <div className={`relative ${isMobile ? "w-full px-6" : "col-span-5"}  grid grid-rows-1 flex flex-col items-center justify-left text-white`}>
                     <div className="row-span-1 mb-4">
-                        <span className={` ${isMobile ? "text-4xl" : "text-5xl"} font-bold text-left leading-tight flex flex-col justify-center mb-8`}>Niyyah Check</span>
+                        <span className={` ${isMobile ? "text-4xl" : "text-5xl"} font-bold text-left leading-tight flex flex-col justify-center mb-4`}></span>
+                        <span className={` ${isMobile ? "text-4xl" : "text-5xl"} font-bold text-left leading-tight flex flex-col justify-center mb-6`}>Niyyah Check</span>
                         <span className={` ${isMobile ? "text-2xl" : "text-3xl"} text-left leading-tight flex flex-col justify-center mb-4`}>
                             Discover your Intentions.
                         </span>
@@ -157,63 +158,63 @@ const AI_Busi = () => {
                                 </div>
                             </div>
                         }
-                        
+
                         {!isMobile ?
-                        <div className="flex flex-col items-center gap-4 w-full px-6">
-                            <input
-                                type="text"
-                                placeholder="Your name*"
-                                className="p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[98%] md:w-1/2"
-                            />
+                            <div className="flex flex-col items-center gap-4 w-full px-6">
+                                <input
+                                    type="text"
+                                    placeholder="Your name*"
+                                    className="p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[98%] md:w-1/2"
+                                />
 
-                            <input
-                                type="email"
-                                placeholder="Your email*"
-                                className="p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[98%] md:w-1/2"
-                            />
+                                <input
+                                    type="email"
+                                    placeholder="Your email*"
+                                    className="p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[98%] md:w-1/2"
+                                />
 
-                            <input
-                                type="tel"
-                                placeholder="Your phone number*"
-                                className="p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[98%] md:w-1/2"
-                            />
+                                <input
+                                    type="tel"
+                                    placeholder="Your phone number*"
+                                    className="p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[98%] md:w-1/2"
+                                />
 
-                            <button
-                                className="px-4 py-3 bg-yellow-500 text-black font-bold hover:bg-white transition-all w-full max-w-[98%] md:w-1/3"
-                                style={{
-                                    fontSize: "clamp(1rem, 2vw, 1.5rem)", // Adjusts button text size dynamically
-                                }}>
-                                Join Waiting List
-                            </button>
-                        </div>
+                                <button
+                                    className="px-4 py-3 bg-yellow-500 text-black font-bold hover:bg-white transition-all w-full max-w-[98%] md:w-1/3"
+                                    style={{
+                                        fontSize: "clamp(1rem, 2vw, 1.5rem)", // Adjusts button text size dynamically
+                                    }}>
+                                    Join Waiting List
+                                </button>
+                            </div>
                             :
-                        <div className="flex flex-col items-center gap-4 w-full">
-                            <input
-                                type="text"
-                                placeholder="Your name*"
-                                className="p-2 bg-white text-black focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[100%] md:w-1/2"
-                            />
+                            <div className="flex flex-col items-center gap-4 w-full">
+                                <input
+                                    type="text"
+                                    placeholder="Your name*"
+                                    className="p-2 bg-white text-black focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[100%] md:w-1/2"
+                                />
 
-                            <input
-                                type="email"
-                                placeholder="Your email*"
-                                className="p-2 bg-white text-black focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[100%] md:w-1/2"
-                            />
+                                <input
+                                    type="email"
+                                    placeholder="Your email*"
+                                    className="p-2 bg-white text-black focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[100%] md:w-1/2"
+                                />
 
-                            <input
-                                type="tel"
-                                placeholder="Your phone number*"
-                                className="p-2 bg-white text-black focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[100%] md:w-1/2"
-                            />
+                                <input
+                                    type="tel"
+                                    placeholder="Your phone number*"
+                                    className="p-2 bg-white text-black focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-[100%] md:w-1/2"
+                                />
 
-                            <button
-                                className="px-4 py-3 bg-yellow-500 text-black font-bold hover:bg-white transition-all w-full max-w-[100%] md:w-1/3"
-                                style={{
-                                    fontSize: "clamp(1rem, 2vw, 1.5rem)", // Adjusts button text size dynamically
-                                }}>
-                                Join Waiting List
-                            </button>
-                        </div>}
+                                <button
+                                    className="px-4 py-3 bg-yellow-500 text-black font-bold hover:bg-white transition-all w-full max-w-[100%] md:w-1/3"
+                                    style={{
+                                        fontSize: "clamp(1rem, 2vw, 1.5rem)", // Adjusts button text size dynamically
+                                    }}>
+                                    Join Waiting List
+                                </button>
+                            </div>}
 
 
                     </div>
