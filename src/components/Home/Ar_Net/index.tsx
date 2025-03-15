@@ -223,7 +223,7 @@ const AI_Net = () => {
                             <span className="flex flex-col mb-8"></span>
                             <span className="flex flex-col mb-8"></span>
                             <span className="text-4xl font-bold text-left leading-tight flex flex-col justify-center mb-12">AR Network</span>
-                            <span className="text-2xl text-left leading-tight flex flex-col justify-center mb-8">
+                            <span className="text-2xl text-left leading-tight flex flex-col justify-center">
                                 The Ummah’s Augmented Reality Network Creating Immersive Experiences
                             </span>
 
