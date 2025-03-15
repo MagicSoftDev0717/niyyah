@@ -180,8 +180,8 @@ const Clock = () => {
                         :
                         <div className="flex text-white items-center justify-center">
                             <button onClick={() => setIsSignInOpen(!isSignInOpen)}
-                                className="px-8 md:px-6 py-1 md:py-3 bg-purple-600 font-bold rounded-lg hover:bg-white hover:text-purple-700 transition-all duration-300"
-                                style={{ fontSize: "clamp(1rem, 5vw, 1.5rem)" }}>
+                                className="px-8 md:px-6 py-2 md:py-3 bg-purple-600 font-bold rounded-lg hover:bg-white hover:text-purple-700 transition-all duration-300"
+                                style={{ fontSize: "clamp(1rem, 2vw, rem)" }}>
                                 Join the Journey
                             </button>
                             {isSignInOpen && (
@@ -195,7 +195,6 @@ const Clock = () => {
                                             <FaTimes />
                                         </button>
 
-                                        {/* Header */}
                                         <h2 className="text-xl text-white font-semibold text-center mb-6">Unlock Your Full Potential!</h2>
 
                                         {/* Form for Name, Email, and Password */}
