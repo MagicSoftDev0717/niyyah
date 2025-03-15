@@ -68,7 +68,7 @@ const Hero = () => {
                     }}></div>
 
                 {/* Content Section: Positioned at the bottom 1/5 of the screen */}
-                <div className="absolute bottom-1/6 w-full flex flex-col items-center justify-center text-white text-center px-6">
+                <div className="absolute bottom-1/5 w-full flex flex-col items-center justify-center text-white text-center px-6">
                     {/* Responsive Heading */}
                     <h2
                         className="leading-tight font-bold"
