@@ -97,7 +97,7 @@ const Clock = () => {
                             { label: "seconds", value: timeLeft.seconds, img: "clock4.svg" },
                         ].map((item, index) => (
                             <div key={index} className="flex flex-col justify-center items-center text-white text-center">
-                                {/* SVG Container with Relative Positioning */}
+                                
                                 <div className={`relative  ${isMobile ? "w-24 h-24" : "w-36 h-36"} flex justify-center items-center`}>
                                     <img src={`/assets/Clock/${item.img}`} alt={item.label} className="w-4/5 h-4/5" />
                                     <span className={`absolute ${isMobile ? "text-6xl" : "text-7xl"} font-bold text-white`}>{item.value}</span>

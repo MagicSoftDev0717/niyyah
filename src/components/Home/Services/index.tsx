@@ -107,7 +107,6 @@ const Services = () => {
                                     alt="Vision Icon"
                                     className="w-16 h-16 flex-shrink-0"
                                 />
-
                                 <span className="text-3xl md:text-5xl font-bold text-left leading-tight inline-block">
                                     Solutions For You
                                 </span>
@@ -167,11 +166,11 @@ const Services = () => {
                                 { src: "md-3.svg", waveColor: "blue" },
                                 { src: "md-4.svg", waveColor: "pink" },
                             ].map((img, idx) => (
-                                <div key={idx} className="w-36 h-36 max-w-[80%] transform scale-y-[-1] relative">
+                                <div key={idx} className="w-42 ransform scale-y-[-1] relative">
                                     {/* Wave container */}
-                                    <div className={`wave-container`}>
+                                    {/* <div className={`wave-container`}>
                                         <div className={`wave ${img.waveColor}`} />
-                                    </div>
+                                    </div> */}
 
                                     {/* Image */}
                                     <img
@@ -185,9 +184,8 @@ const Services = () => {
                             ))}
                         </div>
 
-
                         {/* Large Image */}
-                        <div className="w-48 h-auto max-w-[90%] md:w-64 transform scale-y-[-1]">
+                        <div className="w-52 h-auto max-w-[90%] md:w-64 transform scale-y-[-1]">
                             <img
                                 src={lgImg}
                                 alt="Large Image"
