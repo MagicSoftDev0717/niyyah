@@ -33,7 +33,7 @@ const AI_Busi = () => {
     return (
         <section className="relative w-full flex items-center justify-center overflow-visible">
 
-            <div className={`relative w-full grid grid ${isMobile ? "grid-rows-auto min-h-screen" : "grid-rows-8 h-screen"} flex flex-col items-center justify-center`}>
+            <div className={`relative w-full grid grid ${isMobile ? "grid-rows-auto h-auto" : "grid-rows-8 h-screen"} flex flex-col items-center justify-center`}>
 
                 {!isMobile && (
                     <Image
@@ -136,31 +136,6 @@ const AI_Busi = () => {
                         </div>
                     </div>
                 }
-                {/* <div className={`relative row-span-4 flex ${isMobile ? "grid grid-cols-3" : "grid grid-cols-5"} 
-                    items-center justify-center text-white gap-12 w-full min-h-screen overflow-visible`}
-                    style={{ color: '#A18FF7' }}>
-
-                    <div></div>
-                    <div className="flex flex-col items-center">
-                        <img src="/assets/AI_business/1.svg" alt="Ali AI" className="w-363 h-full mb-4" />
-                        <span className="text-2xl text-white leading-tight">Ali AI</span>
-                        <span className="text-lg leading-tight">Spiritual Coach</span>
-                    </div>
-
-                    <div className="flex flex-col items-center">
-                        <img src="/assets/AI_business/Group 32.svg" alt="Amina AI" className="w-363 h-full mb-4" />
-                        <span className="text-2xl text-white leading-tight">Amina AI</span>
-                        <span className="text-lg leading-tight" >Marriage Coach</span>
-                    </div>
-
-                    <div className="flex flex-col items-center">
-                        <img src="/assets/AI_business/Group 31.svg" alt="Bilal AI" className="w-363 h-full mb-4" />
-                        <span className="text-2xl text-white leading-tight">Bilal AI</span>
-                        <span className="text-lg leading-tight">Fitness Coach</span>
-                    </div>
-
-                    <div></div>
-                </div> */}
                 <div className="relative row-span-2 gap-3 flex flex-col items-top justify-center text-white"
                     style={{
                         background: "linear-gradient(180deg, #000833 0%, rgba(0, 8, 51, 0) 100%)",

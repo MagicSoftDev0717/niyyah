@@ -221,12 +221,10 @@ const AI_Net = () => {
                     <div className="relative row-span-6 col-span-10 grid grid-rows-4 flex flex-col items-start justify-center text-white">
                         <div className="row-span-1 mx-auto px-6 md:px-12">
                             <span className="flex flex-col mb-8"></span>
-                            <span className="flex flex-col mb-8"></span>
                             <span className="text-4xl font-bold text-left leading-tight flex flex-col justify-center mb-12">AR Network</span>
                             <span className="text-2xl text-left leading-tight flex flex-col justify-center">
                                 The Ummah’s Augmented Reality Network Creating Immersive Experiences
                             </span>
-
                         </div>
 
                         <div className="row-span-4 flex flex-col items-start justify-between gap-4 w-full relative mb-4">
@@ -247,7 +245,7 @@ const AI_Net = () => {
                             </span>
                         </div>
 
-                        <div className="relative row-span-1 grid grid-cols-3">
+                        <div className="relative row-span-1 grid grid-cols-3 mb-2">
                             {arImgs.map((imgSrc, idx) => (
                                 <div key={idx} className="flex items-center justify-left gap-2 mb-2 mx-auto px-4 md:px-12">
                                     <img
