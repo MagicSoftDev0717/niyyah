@@ -68,8 +68,8 @@ const AI_Busi = () => {
                     <div className={`${isMobile ? "col-span-8" : "col-span-5"}`}>
                         <div className="items-center justify-center">
                             <div className="row-span-1 text-white mb-4">
-                                <div className="flex items-center gap-x-4 mb-6">
-                                    <span className={`${isMobile ? "text-3xl text-left" : "text-5xl text-center"} font-bold leading-tight`}></span>
+                                <div className="flex items-center gap-x-4 mb-2">
+                                    <span className={`${isMobile ? "text-xl text-left" : "text-5xl text-center"} font-bold leading-tight`}></span>
                                 </div>
                                 <div className="flex items-center gap-x-4 mb-10">
                                     <span className={`${isMobile ? "text-3xl text-left" : "text-5xl text-center"} font-bold leading-tight`}>Meet the Team</span>

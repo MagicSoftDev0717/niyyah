@@ -229,12 +229,18 @@ const AI_Net = () => {
 
                         </div>
 
-                        <div className="row-span-4 flex flex-col items-start justify-start gap-4 ">
-                            <img
-                                src="/assets/AR/AR-human.svg"
-                                alt="AR Human"
-                                className="w-full h-auto object-contain"
-                            />
+                        <div className="row-span-4 flex flex-col items-start justify-between gap-4 w-full relative"
+                        >
+                            <div className="relative w-full">
+                                <img
+                                    src="/assets/AR/AR-human.svg"
+                                    alt="AR Human"
+                                    className="w-screen h-auto object-cover md:w-full"
+                                />
+                                {/* Gradient Overlay */}
+                                <div className="absolute bottom-0 left-0 w-full"
+                                    style={{ height: "33%", background: "linear-gradient(180deg, #000833 0%,  rgba(0, 8, 51, 0.84) 40.5%,rgba(0, 8, 51, 0) 100%)", transform: "matrix(1, 0, 0, -1, 0, 0)" }}></div>
+                            </div>
                             <span className="text-lg text-left leading-tight flex flex-col justify-center mx-auto px-6 md:px-12">
                                 Bring your ideas to life with cutting-edge AR technology! Enhance customer engagement, create
                                 immersive experiences, and elevate your brand with interactive, next-gen solutions. Whether for
