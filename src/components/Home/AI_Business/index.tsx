@@ -115,7 +115,7 @@ const AI_Busi = () => {
                         <div></div>
                     </div>
                     :
-                    <div className="relative row-span-4 flex flex-row items-center justify-center text-white gap-4 w-full h-auto overflow-visible"
+                    <div className="relative row-span-4 flex flex-row items-center justify-center text-white gap-4 w-full h-auto overflow-visible mb-4"
                         style={{ color: '#A18FF7' }}>
                         <div className="flex flex-col items-center">
                             <img src="/assets/AI_business/1.svg" alt="Ali AI" className="w-auto h-auto mb-4" />
